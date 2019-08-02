@@ -8,3 +8,7 @@ composer require validator
 composer require security
 composer req api make
 composer require migrations
+composer require --dev symfony/web-server-bundle
+composer req symfony/phpunit-bridge
+composer req --dev browser-kit
+composer req --dev symfony/css-selector
