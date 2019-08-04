@@ -11,6 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use App\Entity\Depot;
+use App\Entity\Compte;
 
 
 /**
@@ -19,7 +20,7 @@ use App\Entity\Depot;
 class ServiceController extends AbstractController
 {
     /**
-     * @Route("/ajoutsuper", name="ajoutsuper", methods={"POST"})
+     * @Route("/ajoutdestrois", name="ajoutdestrois", methods={"POST"})
      */
     public function index(Request $request, EntityManagerInterface $entityManager, UserPasswordEncoderInterface $passwordEncoder)
     {
@@ -40,29 +41,42 @@ class ServiceController extends AbstractController
             $user = new User();
             $user->setNom($values->nom);
             $user->setPrenom($values->prenom);
-            $user->setStatut($values->statut);
+            $user->setStatut('actif');
             $user->setUsername($values->username);
             $user->setPassword($passwordEncoder->encodePassword($user, $values->password));
-                if ($values->roles==1) {
-                    $user->setRoles(['SUPER_ADMIN']);
-                }
-                if ($values->roles==2) {
-                    $user->setRoles(['ADMIN']);
-                }
-                if ($values->roles==3) {
-                    $user->setRoles(['USER']);
-                }
+            if ($values->roles==2){
+            $user->setRoles(['ROLE_ADMIN']);
+           }
+            if ($values->roles==3){
+                $user->setRoles(['ROLE_USER']);
+            }
+            if ($values->roles==4){
+                $user->setRoles(['ROLE_CAISSIER']);
+            }
 
-                if ($values->roles==4) {
-                    $user->setRoles(['CAISSIER']);
-                }
             $user->setPhoto($values->photo);
-            $user->setPart($partenaire);
 
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($partenaire);
-            $entityManager->persist($user);
-            $entityManager->flush();
+            $user->setPartenaire($partenaire);
+
+            $compte = new Compte();
+            $jour = date('d');
+            $mois = date('m');
+            $annee = date('Y');
+            $heure = date('H');
+            $minute = date('i');
+            $seconde= date('s');
+            $tata= date('ma');
+            $numerocompte=$jour.$mois.$annee.$heure.$minute.$seconde.$tata;
+            $compte->setNumerocompte($numerocompte);
+            $compte->setSolde(0);
+           
+            $compte->setPartenaire($partenaire);
+        
+                    $entityManager = $this->getDoctrine()->getManager();
+                    $entityManager->persist($compte);
+                    $entityManager->persist($partenaire);
+                    $entityManager->persist($user);
+                    $entityManager->flush();
 
             $data = [
                 $status => 201,
@@ -78,7 +92,7 @@ class ServiceController extends AbstractController
     }
 
    /**
-    * @Route("/user", name="user", methods={"POST"})
+    * @Route("/systeme", name="systeme", methods={"POST"})
     */
     public function user(Request $request, EntityManagerInterface $entityManager, UserPasswordEncoderInterface $passwordEncoder)
     
@@ -95,18 +109,13 @@ class ServiceController extends AbstractController
             $user->setStatut($values->statut);
             $user->setUsername($values->username);
             $user->setPassword($passwordEncoder->encodePassword($user, $values->password));
+                
                 if ($values->roles==1) {
-                    $user->setRoles(['SUPER_ADMIN']);
-                }
-                if ($values->roles==2) {
-                    $user->setRoles(['ADMIN']);
-                }
-                if ($values->roles==3) {
-                    $user->setRoles(['USER']);
+                    $user->setRoles(['ROLE_SUPER']);
                 }
 
                 if ($values->roles==4) {
-                    $user->setRoles(['CAISSIER']);
+                    $user->setRoles(['ROLE_CAISSIER']);
                 }
             $user->setPhoto($values->photo);
             $entityManager = $this->getDoctrine()->getManager();
@@ -128,7 +137,7 @@ class ServiceController extends AbstractController
 
 
    /**
-    * @Route("/adduser", name="adduser", methods={"POST"})
+    * @Route("/partenaireuser", name="partenaireuser", methods={"POST"})
     */
     public function adduser(Request $request, EntityManagerInterface $entityManager, UserPasswordEncoderInterface $passwordEncoder)
     
@@ -146,19 +155,20 @@ class ServiceController extends AbstractController
             $user->setUsername($values->username);
             $user->setPassword($passwordEncoder->encodePassword($user, $values->password));
                 if ($values->roles==1) {
-                    $user->setRoles(['SUPER_ADMIN']);
+                    $user->setRoles(['ROLE_SUPER']);
                 }
                 if ($values->roles==2) {
-                    $user->setRoles(['ADMIN']);
+                    $user->setRoles(['ROLE_ADMIN']);
                 }
                 if ($values->roles==3) {
-                    $user->setRoles(['USER']);
+                    $user->setRoles(['ROLE_USER']);
                 }
                 if ($values->roles==4) {
-                    $user->setRoles(['CAISSIER']);
+                    $user->setRoles(['ROLE_CAISSIER']);
                 }
                 $user->setPhoto($values->photo);
-                $partenaire= $this->getDoctrine()->getRepository(Partenaire::class)->find($values->partenaire);
+                $Idpartenaire=$this->getUser()->getPartenaire();
+                $partenaire= $this->getDoctrine()->getRepository(Partenaire::class)->find($Idpartenaire);
                 $user->setPartenaire($partenaire);
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
@@ -186,44 +196,20 @@ class ServiceController extends AbstractController
         $status='status';
 
         $values = json_decode($request->getContent());
-        if(isset($values->username,$values->password)) {
+        $compte = new Compte();
+        $compte = $this->getDoctrine()->getRepository(Compte::class)->findOneBy(["numerocompte"=>$values->numerocompte]);
+        $compte->setSolde($compte->getSolde()+$values->montant);
+    $depot = new Depot();
+    $depot->setDate(new \DateTime);
+    $depot->setMontant($values->montant);
+    
+    $user= $this->getDoctrine()->getRepository(User::class)->find($values->user);
+    $depot->setUser($user);
+
+
+    $compte= $this->getDoctrine()->getRepository(Compte::class)->find($values->compte);
+    $depot->setCompte($compte);
             
-            $user = new User();
-            $user->setNom($values->nom);
-            $user->setPrenom($values->prenom);
-            $user->setStatut($values->statut);
-            $user->setUsername($values->username);
-            $user->setPassword($passwordEncoder->encodePassword($user, $values->password));
-                if ($values->roles==1) {
-                    $user->setRoles(['SUPER_ADMIN']);
-                }
-                if ($values->roles==2) {
-                    $user->setRoles(['ADMIN']);
-                }
-                if ($values->roles==3) {
-                    $user->setRoles(['USER']);
-                }
-                if ($values->roles==4) {
-                    $user->setRoles(['CAISSIER']);
-                }
-                $user->setPhoto($values->photo);
-
-            $compte = new Compte();
-            $compte->setNumerocompte($values->numerocompte);
-            $compte->setSolde($values->solde);
-            $partenaire= $this->getDoctrine()->getRepository(User::class)->find($values->partenaire);
-            $partenaire->setPartenaire($compte);
-
-
-            $depot = new Depot();
-            $depot->setDate(new \DateTime);
-            $depot->setMontant($values->montant);
-        
-            
-            $compte= $this->getDoctrine()->getRepository(Compte::class)->find($values->compte);
-            $depot->setCompte($compte);
-            $user= $this->getDoctrine()->getRepository(User::class)->find($values->user);
-            $user->setCompte($compte);
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($compte);
             $entityManager->persist($depot);
@@ -234,20 +220,11 @@ class ServiceController extends AbstractController
                 $sms => 'Les propriétés du depot ont été bien ajouté'
             ];
             return new JsonResponse($data, 201);
-        }
+        
         $data = [
             $status => 500,
-            $sms => 'Vous devez renseigner les clés'
+            $sms => 'Renseignez les clés'
         ];
         return new JsonResponse($data, 500);
     }
     }
-
-
-
-
-
-
-
-
-
