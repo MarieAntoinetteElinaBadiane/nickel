@@ -59,6 +59,11 @@ class AuthentificationController extends AbstractController
             'username' => $user->getUsername(),
             'roles' => $user->getRoles()
         ]);
+        if ($user -> getStatut() == "bloqué"){
+            return $this->json([
+                'message' => 'ACCÉS REFUSÉ'
+            ]);
+        }
     }
         }
 

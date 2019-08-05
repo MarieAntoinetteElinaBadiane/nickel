@@ -41,7 +41,7 @@ class ServiceController extends AbstractController
             $user = new User();
             $user->setNom(trim($values->nom));
             $user->setPrenom(trim($values->prenom));
-            $user->setStatut(trim('actif'));
+            $user->setStatut(trim($values->statut));
             $user->setUsername(trim($values->username));
             $user->setPassword($passwordEncoder->encodePassword($user, $values->password));
             if (strtolower($values->roles==strtolower(2))){
@@ -106,7 +106,7 @@ class ServiceController extends AbstractController
             $user = new User();
             $user->setNom(trim($values->nom));
             $user->setPrenom(trim($values->prenom));
-            $user->setStatut(trim('actif'));
+            $user->setStatut(trim($values->statut));
             $user->setUsername(trim($values->username));
             $user->setPassword($passwordEncoder->encodePassword($user, $values->password));
                 
@@ -151,7 +151,7 @@ class ServiceController extends AbstractController
             $user = new User();
             $user->setNom(trim($values->nom));
             $user->setPrenom(trim($values->prenom));
-            $user->setStatut(trim('actif'));
+            $user->setStatut(trim($values->statut));
             $user->setUsername(trim($values->username));
             $user->setPassword($passwordEncoder->encodePassword($user, $values->password));
                 if (strtolower($values->roles==strtolower(1))){
