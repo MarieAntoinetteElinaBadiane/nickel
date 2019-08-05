@@ -199,15 +199,15 @@ class ServiceController extends AbstractController
         $compte = new Compte();
         
         if ($values->montant >= 75000){
-    $jour = date('d');
-    $mois = date('m');
-    $annee = date('Y');
-    $heure = date('H');
-    $minute = date('i');
-    $seconde= date('s');
-    $tata = date('am');
-    $numerocompte=$jour.$mois.$annee.$heure.$minute.$seconde.$tata;
-    $compte->setNumerocompte($numerocompte);
+    // $jour = date('d');
+    // $mois = date('m');
+    // $annee = date('Y');
+    // $heure = date('H');
+    // $minute = date('i');
+    // $seconde= date('s');
+    // $tata = date('am');
+    // $numerocompte=$jour.$mois.$annee.$heure.$minute.$seconde.$tata;
+    // $compte->setNumerocompte($numerocompte);
     $compte->setSolde($compte->getSolde()+$values->montant);
     $depot = new Depot();
     $depot->setDate(new \DateTime);
@@ -267,12 +267,12 @@ class ServiceController extends AbstractController
     $tata = date('am');
     $numerocompte=$jour.$mois.$annee.$heure.$minute.$seconde.$tata;
     //$compte = $this->getDoctrine()->getRepository(Compte::class)->findOneBy(["numerocompte"=>$values->numerocompte]);
-    $compte->setSolde($compte->getSolde()+$values->montant);
+    //$compte->setSolde($compte->getSolde()+$values->montant);
     $compte->setNumerocompte($numerocompte);
-    $compte->setSolde($values->solde);
+    $compte->setSolde(0);
 
-    $partenaire= $this->getDoctrine()->getRepository(Partenaire::class)->find($values->comp);
-    $compte->setComp($partenaire);
+    $partenaire= $this->getDoctrine()->getRepository(Partenaire::class)->find($values->partenaire);
+    $compte->setPartenaire($partenaire);
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($compte);

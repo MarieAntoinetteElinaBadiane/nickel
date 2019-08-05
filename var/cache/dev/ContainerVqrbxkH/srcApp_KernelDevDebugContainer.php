@@ -1,6 +1,6 @@
 <?php
 
-namespace ContainerYx8uO6U;
+namespace ContainerVqrbxkH;
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -92,6 +92,11 @@ class srcApp_KernelDevDebugContainer extends Container
             'console.command.public_alias.doctrine_migrations.version_command' => 'getConsole_Command_PublicAlias_DoctrineMigrations_VersionCommandService.php',
             'console.command_loader' => 'getConsole_CommandLoaderService.php',
             'filesystem' => 'getFilesystemService.php',
+            'lexik_jwt_authentication.check_config_command' => 'getLexikJwtAuthentication_CheckConfigCommandService.php',
+            'lexik_jwt_authentication.encoder' => 'getLexikJwtAuthentication_EncoderService.php',
+            'lexik_jwt_authentication.generate_token_command' => 'getLexikJwtAuthentication_GenerateTokenCommandService.php',
+            'lexik_jwt_authentication.jwt_manager' => 'getLexikJwtAuthentication_JwtManagerService.php',
+            'lexik_jwt_authentication.key_loader' => 'getLexikJwtAuthentication_KeyLoaderService.php',
             'routing.loader' => 'getRouting_LoaderService.php',
             'security.authentication_utils' => 'getSecurity_AuthenticationUtilsService.php',
             'security.csrf.token_manager' => 'getSecurity_Csrf_TokenManagerService.php',
@@ -1745,8 +1750,11 @@ class srcApp_KernelDevDebugContainer extends Container
     protected function getSecurity_Authentication_ManagerService()
     {
         $this->privates['security.authentication.manager'] = $instance = new \Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager(new RewindableGenerator(function () {
-            yield 0 => ($this->privates['security.authentication.provider.anonymous.main'] ?? ($this->privates['security.authentication.provider.anonymous.main'] = new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider($this->getParameter('container.build_hash'))));
-        }, 1), true);
+            yield 0 => ($this->privates['security.authentication.provider.dao.login'] ?? $this->load('getSecurity_Authentication_Provider_Dao_LoginService.php'));
+            yield 1 => ($this->privates['security.authentication.provider.anonymous.login'] ?? ($this->privates['security.authentication.provider.anonymous.login'] = new \Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider($this->getParameter('container.build_hash'))));
+            yield 2 => ($this->privates['security.authentication.provider.guard.api'] ?? $this->load('getSecurity_Authentication_Provider_Guard_ApiService.php'));
+            yield 3 => ($this->privates['security.authentication.provider.dao.api'] ?? $this->load('getSecurity_Authentication_Provider_Dao_ApiService.php'));
+        }, 4), true);
 
         $instance->setEventDispatcher(($this->services['event_dispatcher'] ?? $this->getEventDispatcherService()));
 
@@ -1761,15 +1769,18 @@ class srcApp_KernelDevDebugContainer extends Container
     protected function getSecurity_Firewall_MapService()
     {
         return $this->privates['security.firewall.map'] = new \Symfony\Bundle\SecurityBundle\Security\FirewallMap(new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
+            'security.firewall.map.context.api' => ['privates', 'security.firewall.map.context.api', 'getSecurity_Firewall_Map_Context_ApiService.php', true],
             'security.firewall.map.context.dev' => ['privates', 'security.firewall.map.context.dev', 'getSecurity_Firewall_Map_Context_DevService.php', true],
-            'security.firewall.map.context.main' => ['privates', 'security.firewall.map.context.main', 'getSecurity_Firewall_Map_Context_MainService.php', true],
+            'security.firewall.map.context.login' => ['privates', 'security.firewall.map.context.login', 'getSecurity_Firewall_Map_Context_LoginService.php', true],
         ], [
+            'security.firewall.map.context.api' => '?',
             'security.firewall.map.context.dev' => '?',
-            'security.firewall.map.context.main' => '?',
+            'security.firewall.map.context.login' => '?',
         ]), new RewindableGenerator(function () {
             yield 'security.firewall.map.context.dev' => ($this->privates['.security.request_matcher.Iy.T22O'] ?? ($this->privates['.security.request_matcher.Iy.T22O'] = new \Symfony\Component\HttpFoundation\RequestMatcher('^/(_(profiler|wdt)|css|images|js)/')));
-            yield 'security.firewall.map.context.main' => NULL;
-        }, 2));
+            yield 'security.firewall.map.context.login' => ($this->privates['.security.request_matcher.HeUdK73'] ?? ($this->privates['.security.request_matcher.HeUdK73'] = new \Symfony\Component\HttpFoundation\RequestMatcher('^/api/login')));
+            yield 'security.firewall.map.context.api' => ($this->privates['.security.request_matcher.p4VlLPC'] ?? ($this->privates['.security.request_matcher.p4VlLPC'] = new \Symfony\Component\HttpFoundation\RequestMatcher('^/api')));
+        }, 3));
     }
 
     /**
@@ -1977,6 +1988,7 @@ class srcApp_KernelDevDebugContainer extends Container
         'doctrine_migrations.dir_name' => false,
         'nelmio_cors.defaults' => false,
         'api_platform.resource_class_directories' => false,
+        'lexik_jwt_authentication.pass_phrase' => false,
     ];
     private $dynamicParameters = [];
 
@@ -2049,6 +2061,10 @@ class srcApp_KernelDevDebugContainer extends Container
                     'path' => ($this->targetDirs[3].'/vendor/doctrine/doctrine-fixtures-bundle'),
                     'namespace' => 'Doctrine\\Bundle\\FixturesBundle',
                 ],
+                'LexikJWTAuthenticationBundle' => [
+                    'path' => ($this->targetDirs[3].'/vendor/lexik/jwt-authentication-bundle'),
+                    'namespace' => 'Lexik\\Bundle\\JWTAuthenticationBundle',
+                ],
             ]; break;
             case 'kernel.secret': $value = $this->getEnv('APP_SECRET'); break;
             case 'validator.mapping.cache.file': $value = ($this->targetDirs[0].'/validation.php'); break;
@@ -2088,6 +2104,7 @@ class srcApp_KernelDevDebugContainer extends Container
             case 'api_platform.resource_class_directories': $value = [
                 0 => ($this->targetDirs[3].'/src/Entity'),
             ]; break;
+            case 'lexik_jwt_authentication.pass_phrase': $value = $this->getEnv('JWT_PASSPHRASE'); break;
             default: throw new InvalidArgumentException(sprintf('The dynamic parameter "%s" must be defined.', $name));
         }
         $this->loadedDynamicParameters[$name] = true;
@@ -2120,6 +2137,7 @@ class srcApp_KernelDevDebugContainer extends Container
                 'NelmioCorsBundle' => 'Nelmio\\CorsBundle\\NelmioCorsBundle',
                 'ApiPlatformBundle' => 'ApiPlatform\\Core\\Bridge\\Symfony\\Bundle\\ApiPlatformBundle',
                 'DoctrineFixturesBundle' => 'Doctrine\\Bundle\\FixturesBundle\\DoctrineFixturesBundle',
+                'LexikJWTAuthenticationBundle' => 'Lexik\\Bundle\\JWTAuthenticationBundle\\LexikJWTAuthenticationBundle',
             ],
             'kernel.charset' => 'UTF-8',
             'kernel.container_class' => 'srcApp_KernelDevDebugContainer',
@@ -2391,6 +2409,12 @@ class srcApp_KernelDevDebugContainer extends Container
 
             ],
             'api_platform.elasticsearch.enabled' => false,
+            'lexik_jwt_authentication.token_ttl' => 3600,
+            'lexik_jwt_authentication.clock_skew' => 0,
+            'lexik_jwt_authentication.user_identity_field' => 'username',
+            'lexik_jwt_authentication.user_id_claim' => 'username',
+            'lexik_jwt_authentication.encoder.signature_algorithm' => 'RS256',
+            'lexik_jwt_authentication.encoder.crypto_engine' => 'openssl',
             'data_collector.templates' => [
                 'data_collector.request' => [
                     0 => 'request',

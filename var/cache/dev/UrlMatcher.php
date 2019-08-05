@@ -19,6 +19,7 @@ return [
         '/api/systeme' => [[['_route' => 'systeme', '_controller' => 'App\\Controller\\ServiceController::user'], null, ['POST' => 0], null, false, false, null]],
         '/api/partenaireuser' => [[['_route' => 'partenaireuser', '_controller' => 'App\\Controller\\ServiceController::adduser'], null, ['POST' => 0], null, false, false, null]],
         '/api/ajoutargent' => [[['_route' => 'ajoutargent', '_controller' => 'App\\Controller\\ServiceController::argent'], null, ['POST' => 0], null, false, false, null]],
+        '/api/depotargent' => [[['_route' => 'depotargent', '_controller' => 'App\\Controller\\ServiceController::depotargent'], null, ['POST' => 0], null, false, false, null]],
         '/api/login_check' => [[['_route' => 'api_login_check'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
