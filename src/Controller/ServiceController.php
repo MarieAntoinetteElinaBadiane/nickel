@@ -199,8 +199,16 @@ class ServiceController extends AbstractController
         $compte = new Compte();
         
         if ($values->montant >= 75000){
-        $compte = $this->getDoctrine()->getRepository(Compte::class)->findOneBy(["numerocompte"=>$values->numerocompte]);
-        $compte->setSolde($compte->getSolde()+$values->montant);
+    $jour = date('d');
+    $mois = date('m');
+    $annee = date('Y');
+    $heure = date('H');
+    $minute = date('i');
+    $seconde= date('s');
+    $tata = date('am');
+    $numerocompte=$jour.$mois.$annee.$heure.$minute.$seconde.$tata;
+    $compte->setNumerocompte($numerocompte);
+    $compte->setSolde($compte->getSolde()+$values->montant);
     $depot = new Depot();
     $depot->setDate(new \DateTime);
     $depot->setMontant(($values->montant));
@@ -229,5 +237,58 @@ class ServiceController extends AbstractController
             $sms => 'Renseignez les clés'
         ];
         return new JsonResponse($data, 500);
+    }
+
+     /**
+     * @Route("/depotargent", name="depotargent", methods={"POST"})
+     */
+
+     public function depotargent(Request $request, EntityManagerInterface $entityManager)
+     {
+    
+        $sms='message';
+        $status='status';
+
+    $values = json_decode($request->getContent());
+    // $partenaire = new Partenaire();
+    // $partenaire->setNinea($values->ninea);
+    // $partenaire->setAdresse($values->adresse);
+    // $partenaire->setRaisonSociale($values->raison_sociale);
+    // $partenaire->setPhoto($values->photo);
+
+
+    $compte = new Compte();
+    $jour = date('d');
+    $mois = date('m');
+    $annee = date('Y');
+    $heure = date('H');
+    $minute = date('i');
+    $seconde= date('s');
+    $tata = date('am');
+    $numerocompte=$jour.$mois.$annee.$heure.$minute.$seconde.$tata;
+    //$compte = $this->getDoctrine()->getRepository(Compte::class)->findOneBy(["numerocompte"=>$values->numerocompte]);
+    $compte->setSolde($compte->getSolde()+$values->montant);
+    $compte->setNumerocompte($numerocompte);
+    $compte->setSolde($values->solde);
+
+    $partenaire= $this->getDoctrine()->getRepository(Partenaire::class)->find($values->comp);
+    $compte->setComp($partenaire);
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($compte);
+            $entityManager->flush();
+
+            $data = [
+                $status => 201,
+                $sms => 'Les propriétés de votre compte ont été bien ajouté'
+            ];
+            return new JsonResponse($data, 201);
+        
+        $data = [
+            $status => 500,
+            $sms => 'Renseignez les clés'
+        ];
+        return new JsonResponse($data, 500);
+    
     }
     }
