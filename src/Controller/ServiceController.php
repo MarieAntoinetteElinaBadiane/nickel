@@ -32,29 +32,29 @@ class ServiceController extends AbstractController
     
 
             $partenaire = new Partenaire();
-            $partenaire->setNinea($values->ninea);
-            $partenaire->setAdresse($values->adresse);
-            $partenaire->setRaisonSociale($values->raison_sociale);
-            $partenaire->setPhoto($values->photo);
+            $partenaire->setNinea(trim($values->ninea));
+            $partenaire->setAdresse(trim($values->adresse));
+            $partenaire->setRaisonSociale(trim($values->raison_sociale));
+            $partenaire->setPhoto(trim($values->photo));
 
 
             $user = new User();
-            $user->setNom($values->nom);
-            $user->setPrenom($values->prenom);
-            $user->setStatut('actif');
-            $user->setUsername($values->username);
+            $user->setNom(trim($values->nom));
+            $user->setPrenom(trim($values->prenom));
+            $user->setStatut(trim('actif'));
+            $user->setUsername(trim($values->username));
             $user->setPassword($passwordEncoder->encodePassword($user, $values->password));
-            if ($values->roles==2){
+            if (strtolower($values->roles==strtolower(2))){
             $user->setRoles(['ROLE_ADMIN']);
            }
-            if ($values->roles==3){
+            if (strtolower($values->roles==strtolower(3))){
                 $user->setRoles(['ROLE_USER']);
             }
-            if ($values->roles==4){
+            if (strtolower($values->roles==strtolower(4))){
                 $user->setRoles(['ROLE_CAISSIER']);
             }
 
-            $user->setPhoto($values->photo);
+            $user->setPhoto(trim($values->photo));
 
             $user->setPartenaire($partenaire);
 
@@ -67,7 +67,7 @@ class ServiceController extends AbstractController
             $seconde= date('s');
             $tata= date('ma');
             $numerocompte=$jour.$mois.$annee.$heure.$minute.$seconde.$tata;
-            $compte->setNumerocompte($numerocompte);
+            $compte->setNumerocompte(trim($numerocompte));
             $compte->setSolde(0);
            
             $compte->setPartenaire($partenaire);
@@ -104,20 +104,20 @@ class ServiceController extends AbstractController
         if(isset($values->username,$values->password)) {
             
             $user = new User();
-            $user->setNom($values->nom);
-            $user->setPrenom($values->prenom);
-            $user->setStatut($values->statut);
-            $user->setUsername($values->username);
+            $user->setNom(trim($values->nom));
+            $user->setPrenom(trim($values->prenom));
+            $user->setStatut(trim('actif'));
+            $user->setUsername(trim($values->username));
             $user->setPassword($passwordEncoder->encodePassword($user, $values->password));
                 
-                if ($values->roles==1) {
+                if (strtolower($values->roles==strtolower(1))) {
                     $user->setRoles(['ROLE_SUPER']);
                 }
 
-                if ($values->roles==4) {
+                if (strtolower($values->roles==strtolower(4))) {
                     $user->setRoles(['ROLE_CAISSIER']);
                 }
-            $user->setPhoto($values->photo);
+            $user->setPhoto(trim($values->photo));
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
@@ -149,24 +149,24 @@ class ServiceController extends AbstractController
         if(isset($values->username,$values->password)) {
             
             $user = new User();
-            $user->setNom($values->nom);
-            $user->setPrenom($values->prenom);
-            $user->setStatut($values->statut);
-            $user->setUsername($values->username);
+            $user->setNom(trim($values->nom));
+            $user->setPrenom(trim($values->prenom));
+            $user->setStatut(trim('actif'));
+            $user->setUsername(trim($values->username));
             $user->setPassword($passwordEncoder->encodePassword($user, $values->password));
-                if ($values->roles==1) {
+                if (strtolower($values->roles==strtolower(1))){
                     $user->setRoles(['ROLE_SUPER']);
                 }
-                if ($values->roles==2) {
+                if (strtolower($values->roles==strtolower(2))) {
                     $user->setRoles(['ROLE_ADMIN']);
                 }
-                if ($values->roles==3) {
+                if (strtolower($values->roles==strtolower(3))) {
                     $user->setRoles(['ROLE_USER']);
                 }
-                if ($values->roles==4) {
+                if (strtolower($values->roles==strtolower(4))) {
                     $user->setRoles(['ROLE_CAISSIER']);
                 }
-                $user->setPhoto($values->photo);
+                $user->setPhoto(trim($values->photo));
                 $Idpartenaire=$this->getUser()->getPartenaire();
                 $partenaire= $this->getDoctrine()->getRepository(Partenaire::class)->find($Idpartenaire);
                 $user->setPartenaire($partenaire);
@@ -197,11 +197,13 @@ class ServiceController extends AbstractController
 
         $values = json_decode($request->getContent());
         $compte = new Compte();
+        
+        if ($values->montant>=75000){
         $compte = $this->getDoctrine()->getRepository(Compte::class)->findOneBy(["numerocompte"=>$values->numerocompte]);
         $compte->setSolde($compte->getSolde()+$values->montant);
     $depot = new Depot();
     $depot->setDate(new \DateTime);
-    $depot->setMontant($values->montant);
+    $depot->setMontant(($values->montant));
     
     $user= $this->getDoctrine()->getRepository(User::class)->find($values->user);
     $depot->setUser($user);
@@ -209,6 +211,7 @@ class ServiceController extends AbstractController
 
     $compte= $this->getDoctrine()->getRepository(Compte::class)->find($values->compte);
     $depot->setCompte($compte);
+
             
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($compte);
@@ -220,7 +223,7 @@ class ServiceController extends AbstractController
                 $sms => 'Les propriétés du depot ont été bien ajouté'
             ];
             return new JsonResponse($data, 201);
-        
+        }
         $data = [
             $status => 500,
             $sms => 'Renseignez les clés'

@@ -24,13 +24,13 @@ class AuthentificationController extends AbstractController
         if(isset($values->username,$values->password)) {
 
             $user = new User();
-            $user->setNom($values->nom);
-            $user->setPrenom($values->prenom);
-            $user->setStatut($values->statut);
-            $user->setUsername($values->username);
+            $user->setNom(trim($values->nom));
+            $user->setPrenom(trim($values->prenom));
+            $user->setStatut(trim('actif'));
+            $user->setUsername(trim($values->username));
             $user->setPassword($passwordEncoder->encodePassword($user, $values->password));
                     $user->setRoles(['ROLE_SUPER']);
-                    $user->setPhoto($values->photo);
+                    $user->setPhoto(trim($values->photo));
                 $entityManager = $this->getDoctrine()->getManager();
                 
                 $entityManager->persist($user);
