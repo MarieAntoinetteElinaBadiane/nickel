@@ -67,3 +67,10 @@ ef785f,127.0.0.1,POST,http://localhost:8000/api/depotargent,1565008588,,500
 260ddb,127.0.0.1,GET,http://localhost:8000/api/ajoutargent,1565009011,4a43b0,200
 4a43b0,127.0.0.1,POST,http://localhost:8000/api/ajoutargent,1565009011,,500
 aab89f,127.0.0.1,POST,http://localhost:8000/api/ajoutargent,1565009338,,201
+26a453,127.0.0.1,GET,http://localhost:8000/api/syteme,1565013103,a32669,200
+a32669,127.0.0.1,POST,http://localhost:8000/api/syteme,1565013103,,404
+0b3818,127.0.0.1,POST,http://localhost:8000/api/systeme,1565013134,,401
+c6a194,127.0.0.1,POST,http://localhost:8000/api/login_check,1565013144,,200
+a457bc,127.0.0.1,POST,http://localhost:8000/api/systeme,1565013174,,201
+849cf4,127.0.0.1,POST,http://localhost:8000/api/login_check,1565014182,,200
+a8451c,127.0.0.1,POST,http://localhost:8000/api/ajoutdestrois,1565014378,,201
