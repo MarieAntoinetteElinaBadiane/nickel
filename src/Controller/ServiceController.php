@@ -198,7 +198,7 @@ class ServiceController extends AbstractController
         $values = json_decode($request->getContent());
         $compte = new Compte();
         
-        if ($values->montant>=75000){
+        if ($values->montant >= 75000){
         $compte = $this->getDoctrine()->getRepository(Compte::class)->findOneBy(["numerocompte"=>$values->numerocompte]);
         $compte->setSolde($compte->getSolde()+$values->montant);
     $depot = new Depot();
