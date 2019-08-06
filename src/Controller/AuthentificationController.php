@@ -1,6 +1,27 @@
 <?php
 
 namespace App\Controller;
+
+function codage($test){
+    $retour = 0;
+    $taille= strlen($test);
+    for($i=0; $i<$taille; $i++){
+        if (ord($test[$i])==32){
+            $retour=1;
+        }
+        else {
+            $retour=0; break;
+        }
+
+    }
+    if($retour==0){
+        return bien;
+    }
+    if ($retour==1) {
+        return mauvais;
+    }
+
+}
 use App\Entity\User;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -24,13 +45,13 @@ class AuthentificationController extends AbstractController
         if(isset($values->username,$values->password)) {
 
             $user = new User();
-            $user->setNom(trim($values->nom));
-            $user->setPrenom(trim($values->prenom));
-            $user->setStatut(trim('actif'));
-            $user->setUsername(trim($values->username));
+            $user->setNom->codage($values->nom);
+            $user->setPrenom->codage($values->prenom);
+            $user->setStatut->codage($values->statut);
+            $user->setUsername->codage($values->username);
             $user->setPassword($passwordEncoder->encodePassword($user, $values->password));
                     $user->setRoles(['ROLE_SUPER']);
-                    $user->setPhoto(trim($values->photo));
+                    $user->setPhoto->codage($values->photo);
                 $entityManager = $this->getDoctrine()->getManager();
                 
                 $entityManager->persist($user);

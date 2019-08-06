@@ -1,6 +1,26 @@
 <?php
-
 namespace App\Controller;
+
+function codage($test){
+    $retour = 0;
+    $taille= strlen($test);
+    for($i=0; $i<$taille; $i++){
+        if (ord($test[$i])==32){
+            $retour=1;
+        }
+        else {
+            $retour=0; break;
+        }
+
+    }
+    if($retour==0){
+        return bien;
+    }
+    if ($retour==1) {
+        return mauvais;
+    }
+
+}
 
 use App\Entity\User;
 use App\Entity\Partenaire;
@@ -32,17 +52,17 @@ class ServiceController extends AbstractController
     
 
             $partenaire = new Partenaire();
-            $partenaire->setNinea(trim($values->ninea));
-            $partenaire->setAdresse(trim($values->adresse));
-            $partenaire->setRaisonSociale(trim($values->raison_sociale));
-            $partenaire->setPhoto(trim($values->photo));
+            $partenaire->setNinea->codage($values->ninea);
+            $partenaire->setAdresse->codage($values->adresse);
+            $partenaire->setRaisonSociale->codage($values->raison_sociale);
+            $partenaire->setPhoto->codage($values->photo);
 
 
             $user = new User();
-            $user->setNom(trim($values->nom));
-            $user->setPrenom(trim($values->prenom));
-            $user->setStatut(trim($values->statut));
-            $user->setUsername(trim($values->username));
+            $user->setNom->codage($values->nom);
+            $user->setPrenom->codage($values->prenom);
+            $user->setStatut->codage($values->statut);
+            $user->setUsername->codage($values->username);
             $user->setPassword($passwordEncoder->encodePassword($user, $values->password));
             if (strtolower($values->roles==strtolower(2))){
             $user->setRoles(['ROLE_ADMIN']);
@@ -54,7 +74,7 @@ class ServiceController extends AbstractController
                 $user->setRoles(['ROLE_CAISSIER']);
             }
 
-            $user->setPhoto(trim($values->photo));
+            $user->setPhoto->codage($values->photo);
 
             $user->setPartenaire($partenaire);
 
@@ -67,7 +87,7 @@ class ServiceController extends AbstractController
             $seconde= date('s');
             $tata= date('ma');
             $numerocompte=$jour.$mois.$annee.$heure.$minute.$seconde.$tata;
-            $compte->setNumerocompte(trim($numerocompte));
+            $compte->setNumerocompte->codage($numerocompte);
             $compte->setSolde(0);
            
             $compte->setPartenaire($partenaire);
@@ -104,10 +124,10 @@ class ServiceController extends AbstractController
         if(isset($values->username,$values->password)) {
             
             $user = new User();
-            $user->setNom(trim($values->nom));
-            $user->setPrenom(trim($values->prenom));
-            $user->setStatut(trim($values->statut));
-            $user->setUsername(trim($values->username));
+            $user->setNom->codage($values->nom);
+            $user->setPrenom->codage($values->prenom);
+            $user->setStatut->codage($values->statut);
+            $user->setUsername->codage($values->username);
             $user->setPassword($passwordEncoder->encodePassword($user, $values->password));
                 
                 if (strtolower($values->roles==strtolower(1))) {
@@ -117,7 +137,7 @@ class ServiceController extends AbstractController
                 if (strtolower($values->roles==strtolower(4))) {
                     $user->setRoles(['ROLE_CAISSIER']);
                 }
-            $user->setPhoto(trim($values->photo));
+            $user->setPhoto->codage($values->photo);
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
@@ -149,10 +169,10 @@ class ServiceController extends AbstractController
         if(isset($values->username,$values->password)) {
             
             $user = new User();
-            $user->setNom(trim($values->nom));
-            $user->setPrenom(trim($values->prenom));
-            $user->setStatut(trim($values->statut));
-            $user->setUsername(trim($values->username));
+            $user->setNom->codage($values->nom);
+            $user->setPrenom->codage($values->prenom);
+            $user->setStatut->codage($values->statut);
+            $user->setUsername->codage($values->username);
             $user->setPassword($passwordEncoder->encodePassword($user, $values->password));
                 if (strtolower($values->roles==strtolower(1))){
                     $user->setRoles(['ROLE_SUPER']);
@@ -166,7 +186,7 @@ class ServiceController extends AbstractController
                 if (strtolower($values->roles==strtolower(4))) {
                     $user->setRoles(['ROLE_CAISSIER']);
                 }
-                $user->setPhoto(trim($values->photo));
+                $user->setPhoto->codage($values->photo);
                 $Idpartenaire=$this->getUser()->getPartenaire();
                 $partenaire= $this->getDoctrine()->getRepository(Partenaire::class)->find($Idpartenaire);
                 $user->setPartenaire($partenaire);
@@ -268,7 +288,7 @@ class ServiceController extends AbstractController
     $numerocompte=$jour.$mois.$annee.$heure.$minute.$seconde.$tata;
     //$compte = $this->getDoctrine()->getRepository(Compte::class)->findOneBy(["numerocompte"=>$values->numerocompte]);
     //$compte->setSolde($compte->getSolde()+$values->montant);
-    $compte->setNumerocompte($numerocompte);
+    $compte->setNumerocompte->codage($numerocompte);
     $compte->setSolde(0);
 
     $partenaire= $this->getDoctrine()->getRepository(Partenaire::class)->find($values->partenaire);
