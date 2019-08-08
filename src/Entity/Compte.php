@@ -13,6 +13,10 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Compte
 {
+    public function __toString()
+    {
+        return $this->numerocompte;
+    }
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()

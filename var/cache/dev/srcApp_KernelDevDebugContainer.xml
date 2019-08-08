@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.root_dir">/home/elina/nickel/nickel/src</parameter>
-    <parameter key="kernel.project_dir">/home/elina/nickel/nickel</parameter>
+    <parameter key="kernel.root_dir">/home/elina/derniér/nickel/src</parameter>
+    <parameter key="kernel.project_dir">/home/elina/derniér/nickel</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
     <parameter key="kernel.name">src</parameter>
-    <parameter key="kernel.cache_dir">/home/elina/nickel/nickel/var/cache/dev</parameter>
-    <parameter key="kernel.logs_dir">/home/elina/nickel/nickel/var/log</parameter>
+    <parameter key="kernel.cache_dir">/home/elina/derniér/nickel/var/cache/dev</parameter>
+    <parameter key="kernel.logs_dir">/home/elina/derniér/nickel/var/log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="WebServerBundle">Symfony\Bundle\WebServerBundle\WebServerBundle</parameter>
@@ -23,63 +23,68 @@
       <parameter key="ApiPlatformBundle">ApiPlatform\Core\Bridge\Symfony\Bundle\ApiPlatformBundle</parameter>
       <parameter key="DoctrineFixturesBundle">Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle</parameter>
       <parameter key="LexikJWTAuthenticationBundle">Lexik\Bundle\JWTAuthenticationBundle\LexikJWTAuthenticationBundle</parameter>
+      <parameter key="FOSRestBundle">FOS\RestBundle\FOSRestBundle</parameter>
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
-        <parameter key="path">/home/elina/nickel/nickel/vendor/symfony/framework-bundle</parameter>
+        <parameter key="path">/home/elina/derniér/nickel/vendor/symfony/framework-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="WebServerBundle" type="collection">
-        <parameter key="path">/home/elina/nickel/nickel/vendor/symfony/web-server-bundle</parameter>
+        <parameter key="path">/home/elina/derniér/nickel/vendor/symfony/web-server-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebServerBundle</parameter>
       </parameter>
       <parameter key="TwigBundle" type="collection">
-        <parameter key="path">/home/elina/nickel/nickel/vendor/symfony/twig-bundle</parameter>
+        <parameter key="path">/home/elina/derniér/nickel/vendor/symfony/twig-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\TwigBundle</parameter>
       </parameter>
       <parameter key="WebProfilerBundle" type="collection">
-        <parameter key="path">/home/elina/nickel/nickel/vendor/symfony/web-profiler-bundle</parameter>
+        <parameter key="path">/home/elina/derniér/nickel/vendor/symfony/web-profiler-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebProfilerBundle</parameter>
       </parameter>
       <parameter key="DoctrineCacheBundle" type="collection">
-        <parameter key="path">/home/elina/nickel/nickel/vendor/doctrine/doctrine-cache-bundle</parameter>
+        <parameter key="path">/home/elina/derniér/nickel/vendor/doctrine/doctrine-cache-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineCacheBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
-        <parameter key="path">/home/elina/nickel/nickel/vendor/doctrine/doctrine-bundle</parameter>
+        <parameter key="path">/home/elina/derniér/nickel/vendor/doctrine/doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="DoctrineMigrationsBundle" type="collection">
-        <parameter key="path">/home/elina/nickel/nickel/vendor/doctrine/doctrine-migrations-bundle</parameter>
+        <parameter key="path">/home/elina/derniér/nickel/vendor/doctrine/doctrine-migrations-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\MigrationsBundle</parameter>
       </parameter>
       <parameter key="MakerBundle" type="collection">
-        <parameter key="path">/home/elina/nickel/nickel/vendor/symfony/maker-bundle/src</parameter>
+        <parameter key="path">/home/elina/derniér/nickel/vendor/symfony/maker-bundle/src</parameter>
         <parameter key="namespace">Symfony\Bundle\MakerBundle</parameter>
       </parameter>
       <parameter key="SensioFrameworkExtraBundle" type="collection">
-        <parameter key="path">/home/elina/nickel/nickel/vendor/sensio/framework-extra-bundle</parameter>
+        <parameter key="path">/home/elina/derniér/nickel/vendor/sensio/framework-extra-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\FrameworkExtraBundle</parameter>
       </parameter>
       <parameter key="SecurityBundle" type="collection">
-        <parameter key="path">/home/elina/nickel/nickel/vendor/symfony/security-bundle</parameter>
+        <parameter key="path">/home/elina/derniér/nickel/vendor/symfony/security-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SecurityBundle</parameter>
       </parameter>
       <parameter key="NelmioCorsBundle" type="collection">
-        <parameter key="path">/home/elina/nickel/nickel/vendor/nelmio/cors-bundle</parameter>
+        <parameter key="path">/home/elina/derniér/nickel/vendor/nelmio/cors-bundle</parameter>
         <parameter key="namespace">Nelmio\CorsBundle</parameter>
       </parameter>
       <parameter key="ApiPlatformBundle" type="collection">
-        <parameter key="path">/home/elina/nickel/nickel/vendor/api-platform/core/src/Bridge/Symfony/Bundle</parameter>
+        <parameter key="path">/home/elina/derniér/nickel/vendor/api-platform/core/src/Bridge/Symfony/Bundle</parameter>
         <parameter key="namespace">ApiPlatform\Core\Bridge\Symfony\Bundle</parameter>
       </parameter>
       <parameter key="DoctrineFixturesBundle" type="collection">
-        <parameter key="path">/home/elina/nickel/nickel/vendor/doctrine/doctrine-fixtures-bundle</parameter>
+        <parameter key="path">/home/elina/derniér/nickel/vendor/doctrine/doctrine-fixtures-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\FixturesBundle</parameter>
       </parameter>
       <parameter key="LexikJWTAuthenticationBundle" type="collection">
-        <parameter key="path">/home/elina/nickel/nickel/vendor/lexik/jwt-authentication-bundle</parameter>
+        <parameter key="path">/home/elina/derniér/nickel/vendor/lexik/jwt-authentication-bundle</parameter>
         <parameter key="namespace">Lexik\Bundle\JWTAuthenticationBundle</parameter>
+      </parameter>
+      <parameter key="FOSRestBundle" type="collection">
+        <parameter key="path">/home/elina/derniér/nickel/vendor/friendsofsymfony/rest-bundle</parameter>
+        <parameter key="namespace">FOS\RestBundle</parameter>
       </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
@@ -103,16 +108,18 @@
     </parameter>
     <parameter key="session.save_path">/var/lib/php/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
+    <parameter key="form.type_extension.csrf.enabled">true</parameter>
+    <parameter key="form.type_extension.csrf.field_name">_token</parameter>
     <parameter key="asset.request_context.base_path"></parameter>
     <parameter key="asset.request_context.secure">false</parameter>
     <parameter key="validator.mapping.cache.prefix"></parameter>
-    <parameter key="validator.mapping.cache.file">/home/elina/nickel/nickel/var/cache/dev/validation.php</parameter>
+    <parameter key="validator.mapping.cache.file">/home/elina/derniér/nickel/var/cache/dev/validation.php</parameter>
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:/home/elina/nickel/nickel/var/cache/dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:/home/elina/derniér/nickel/var/cache/dev/profiler</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">/home/elina/nickel/nickel/var/cache/dev/srcApp_KernelDevDebugContainer.xml</parameter>
+    <parameter key="debug.container.dump">/home/elina/derniér/nickel/var/cache/dev/srcApp_KernelDevDebugContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
@@ -120,13 +127,13 @@
     <parameter key="router.cache_class_prefix">srcApp_KernelDevDebugContainer</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
-    <parameter key="serializer.mapping.cache.file">/home/elina/nickel/nickel/var/cache/dev/serialization.php</parameter>
+    <parameter key="serializer.mapping.cache.file">/home/elina/derniér/nickel/var/cache/dev/serialization.php</parameter>
     <parameter key="serializer.mapping.cache.prefix"></parameter>
     <parameter key="twig.exception_listener.controller">twig.controller.exception::showAction</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
-    <parameter key="twig.default_path">/home/elina/nickel/nickel/templates</parameter>
+    <parameter key="twig.default_path">/home/elina/derniér/nickel/templates</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
     <parameter key="web_profiler.debug_toolbar.mode">2</parameter>
     <parameter key="doctrine_cache.apc.class">Doctrine\Common\Cache\ApcCache</parameter>
@@ -236,9 +243,9 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">/home/elina/nickel/nickel/var/cache/dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">/home/elina/derniér/nickel/var/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
-    <parameter key="doctrine_migrations.dir_name">/home/elina/nickel/nickel/src/Migrations</parameter>
+    <parameter key="doctrine_migrations.dir_name">/home/elina/derniér/nickel/src/Migrations</parameter>
     <parameter key="doctrine_migrations.namespace">DoctrineMigrations</parameter>
     <parameter key="doctrine_migrations.table_name">migration_versions</parameter>
     <parameter key="doctrine_migrations.column_name">version</parameter>
@@ -357,7 +364,7 @@
     </parameter>
     <parameter key="api_platform.http_cache.public">null</parameter>
     <parameter key="api_platform.resource_class_directories" type="collection">
-      <parameter>/home/elina/nickel/nickel/src/Entity</parameter>
+      <parameter>/home/elina/derniér/nickel/src/Entity</parameter>
     </parameter>
     <parameter key="api_platform.oauth.enabled">false</parameter>
     <parameter key="api_platform.oauth.clientId"></parameter>
@@ -381,6 +388,7 @@
     <parameter key="lexik_jwt_authentication.user_id_claim">username</parameter>
     <parameter key="lexik_jwt_authentication.encoder.signature_algorithm">RS256</parameter>
     <parameter key="lexik_jwt_authentication.encoder.crypto_engine">openssl</parameter>
+    <parameter key="fos_rest.format_listener.rules">null</parameter>
     <parameter key="data_collector.templates" type="collection">
       <parameter key="data_collector.request" type="collection">
         <parameter>request</parameter>
@@ -405,6 +413,10 @@
       <parameter key="data_collector.ajax" type="collection">
         <parameter>ajax</parameter>
         <parameter>@WebProfiler/Collector/ajax.html.twig</parameter>
+      </parameter>
+      <parameter key="data_collector.form" type="collection">
+        <parameter>form</parameter>
+        <parameter>@WebProfiler/Collector/form.html.twig</parameter>
       </parameter>
       <parameter key="data_collector.exception" type="collection">
         <parameter>exception</parameter>
@@ -481,6 +493,18 @@
       <tag name="doctrine.fixture.orm"/>
       <argument type="service" id="security.user_password_encoder.generic"/>
     </service>
+    <service id="App\Form\CompteType" class="App\Form\CompteType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\DepotType" class="App\Form\DepotType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\PartenaireType" class="App\Form\PartenaireType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\UserType" class="App\Form\UserType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Repository\CompteRepository" class="App\Repository\CompteRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
@@ -551,7 +575,7 @@
     <service id="cache_warmer" class="Symfony\Component\HttpKernel\CacheWarmer\CacheWarmerAggregate" public="true">
       <argument type="tagged" tag="kernel.cache_warmer"/>
       <argument>true</argument>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/srcApp_KernelDevDebugContainerDeprecations.log</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/srcApp_KernelDevDebugContainerDeprecations.log</argument>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer" public="true">
       <argument type="tagged" tag="kernel.cache_clearer"/>
@@ -560,9 +584,9 @@
     <service id="filesystem" class="Symfony\Component\Filesystem\Filesystem" public="true"/>
     <service id="file_locator" class="Symfony\Component\HttpKernel\Config\FileLocator" public="false">
       <argument type="service" id="kernel"/>
-      <argument>/home/elina/nickel/nickel/src/Resources</argument>
+      <argument>/home/elina/derniér/nickel/src/Resources</argument>
       <argument type="collection">
-        <argument>/home/elina/nickel/nickel/src</argument>
+        <argument>/home/elina/derniér/nickel/src</argument>
       </argument>
     </service>
     <service id="uri_signer" class="Symfony\Component\HttpKernel\UriSigner" public="false">
@@ -587,10 +611,12 @@
         <argument key="cache.annotations" type="service" id="cache.annotations" on-invalid="ignore_uninitialized"/>
         <argument key="cache.property_info" type="service" id="cache.property_info" on-invalid="ignore_uninitialized"/>
         <argument key="cache.messenger.restart_workers_signal" type="service" id="cache.messenger.restart_workers_signal" on-invalid="ignore_uninitialized"/>
+        <argument key="form.choice_list_factory.cached" type="service" id="form.choice_list_factory.cached" on-invalid="ignore_uninitialized"/>
         <argument key="profiler" type="service" id="profiler" on-invalid="ignore_uninitialized"/>
         <argument key="debug.validator" type="service" id="debug.validator" on-invalid="ignore_uninitialized"/>
         <argument key="debug.stopwatch" type="service" id="debug.stopwatch" on-invalid="ignore_uninitialized"/>
         <argument key="debug.event_dispatcher" type="service" id="debug.event_dispatcher" on-invalid="ignore_uninitialized"/>
+        <argument key="form.type.entity" type="service" id="form.type.entity" on-invalid="ignore_uninitialized"/>
         <argument key="security.token_storage" type="service" id="security.token_storage" on-invalid="ignore_uninitialized"/>
         <argument key="cache.security_expression_language" type="service" id="cache.security_expression_language" on-invalid="ignore_uninitialized"/>
         <argument key="api_platform.cache.route_name_resolver" type="service" id="api_platform.cache.route_name_resolver" on-invalid="ignore_uninitialized"/>
@@ -598,6 +624,7 @@
         <argument key="api_platform.cache.subresource_operation_factory" type="service" id="api_platform.cache.subresource_operation_factory" on-invalid="ignore_uninitialized"/>
         <argument key="api_platform.cache.metadata.resource" type="service" id="api_platform.cache.metadata.resource" on-invalid="ignore_uninitialized"/>
         <argument key="api_platform.cache.metadata.property" type="service" id="api_platform.cache.metadata.property" on-invalid="ignore_uninitialized"/>
+        <argument key="fos_rest.view_handler.default" type="service" id="fos_rest.view_handler.default" on-invalid="ignore_uninitialized"/>
       </argument>
       <argument type="collection">
         <argument key="cache.app">reset</argument>
@@ -607,10 +634,12 @@
         <argument key="cache.annotations">reset</argument>
         <argument key="cache.property_info">reset</argument>
         <argument key="cache.messenger.restart_workers_signal">reset</argument>
+        <argument key="form.choice_list_factory.cached">reset</argument>
         <argument key="profiler">reset</argument>
         <argument key="debug.validator">reset</argument>
         <argument key="debug.stopwatch">reset</argument>
         <argument key="debug.event_dispatcher">reset</argument>
+        <argument key="form.type.entity">reset</argument>
         <argument key="security.token_storage">setToken</argument>
         <argument key="cache.security_expression_language">reset</argument>
         <argument key="api_platform.cache.route_name_resolver">reset</argument>
@@ -618,6 +647,7 @@
         <argument key="api_platform.cache.subresource_operation_factory">reset</argument>
         <argument key="api_platform.cache.metadata.resource">reset</argument>
         <argument key="api_platform.cache.metadata.property">reset</argument>
+        <argument key="fos_rest.view_handler.default">reset</argument>
       </argument>
     </service>
     <service id="reverse_container" class="Symfony\Component\DependencyInjection\ReverseContainer" public="false">
@@ -654,7 +684,7 @@
     <service id="console.command.assets_install" class="Symfony\Bundle\FrameworkBundle\Command\AssetsInstallCommand" public="false">
       <tag name="console.command" command="assets:install"/>
       <argument type="service" id="filesystem"/>
-      <argument>/home/elina/nickel/nickel</argument>
+      <argument>/home/elina/derniér/nickel</argument>
       <call method="setName">
         <argument>assets:install</argument>
       </call>
@@ -770,6 +800,42 @@
         <argument>lint:yaml</argument>
       </call>
     </service>
+    <service id="console.command.form_debug" class="Symfony\Component\Form\Command\DebugCommand" public="false">
+      <tag name="console.command" command="debug:form"/>
+      <argument type="service" id="form.registry"/>
+      <argument type="collection">
+        <argument>Symfony\Component\Form\Extension\Core\Type</argument>
+        <argument>App\Form</argument>
+        <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
+      </argument>
+      <argument type="collection">
+        <argument>App\Form\CompteType</argument>
+        <argument>App\Form\DepotType</argument>
+        <argument>App\Form\PartenaireType</argument>
+        <argument>App\Form\UserType</argument>
+        <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
+        <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
+        <argument>Symfony\Component\Form\Extension\Core\Type\FileType</argument>
+        <argument>Symfony\Bridge\Doctrine\Form\Type\EntityType</argument>
+      </argument>
+      <argument type="collection">
+        <argument>Symfony\Component\Form\Extension\Core\Type\TransformationFailureExtension</argument>
+        <argument>Symfony\Component\Form\Extension\HttpFoundation\Type\FormTypeHttpFoundationExtension</argument>
+        <argument>Symfony\Component\Form\Extension\Validator\Type\FormTypeValidatorExtension</argument>
+        <argument>Symfony\Component\Form\Extension\Validator\Type\RepeatedTypeValidatorExtension</argument>
+        <argument>Symfony\Component\Form\Extension\Validator\Type\SubmitTypeValidatorExtension</argument>
+        <argument>Symfony\Component\Form\Extension\Csrf\Type\FormTypeCsrfExtension</argument>
+        <argument>Symfony\Component\Form\Extension\DataCollector\Type\DataCollectorTypeExtension</argument>
+      </argument>
+      <argument type="collection">
+        <argument>Symfony\Component\Form\Extension\Validator\ValidatorTypeGuesser</argument>
+        <argument>Symfony\Bridge\Doctrine\Form\DoctrineOrmTypeGuesser</argument>
+      </argument>
+      <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
+      <call method="setName">
+        <argument>debug:form</argument>
+      </call>
+    </service>
     <service id="cache.app" class="Symfony\Component\Cache\Adapter\TraceableAdapter" public="true">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
@@ -818,7 +884,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/pools</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -847,7 +913,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/pools</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -946,7 +1012,7 @@
         <argument key="api_platform.cache.metadata.property" type="service" id="api_platform.cache.metadata.property" on-invalid="ignore_uninitialized"/>
       </argument>
     </service>
-    <service id=".1_NativeFileSessionHandler~foOr00q" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
+    <service id=".1_NativeFileSessionHandler~7.ZFl6Y" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
       <argument>/var/lib/php/sessions</argument>
     </service>
     <service id="session" class="Symfony\Component\HttpFoundation\Session\Session" public="true">
@@ -970,12 +1036,12 @@
     <service id="session.flash_bag" class="Symfony\Component\HttpFoundation\Session\Flash\FlashBag" public="false"/>
     <service id="session.attribute_bag" class="Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag" public="false"/>
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage" public="false">
-      <argument>/home/elina/nickel/nickel/var/cache/dev/sessions</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler" public="false">
-      <argument type="service" id=".1_NativeFileSessionHandler~foOr00q"/>
+      <argument type="service" id=".1_NativeFileSessionHandler~7.ZFl6Y"/>
     </service>
     <service id="session_listener" class="Symfony\Component\HttpKernel\EventListener\SessionListener" public="false">
       <tag name="kernel.event_subscriber"/>
@@ -1002,6 +1068,99 @@
     </service>
     <service id="twig.extension.security_csrf" class="Symfony\Bridge\Twig\Extension\CsrfExtension" public="false">
       <tag name="twig.extension"/>
+    </service>
+    <service id="form.resolved_type_factory" class="Symfony\Component\Form\Extension\DataCollector\Proxy\ResolvedTypeFactoryDataCollectorProxy" public="false">
+      <argument type="service" id=".1_ResolvedFormTypeFactory~h.nrdVi"/>
+      <argument type="service" id="data_collector.form"/>
+    </service>
+    <service id="form.registry" class="Symfony\Component\Form\FormRegistry" public="false">
+      <argument type="collection">
+        <argument type="service" id="form.extension"/>
+      </argument>
+      <argument type="service" id="form.resolved_type_factory"/>
+    </service>
+    <service id="form.factory" class="Symfony\Component\Form\FormFactory" public="true">
+      <argument type="service" id="form.registry"/>
+    </service>
+    <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
+      <argument type="service" id=".service_locator.uuNozL3"/>
+      <argument type="collection">
+        <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
+          <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
+          <argument type="service" id="form.type_extension.form.http_foundation"/>
+          <argument type="service" id="form.type_extension.form.validator"/>
+          <argument type="service" id="form.type_extension.csrf"/>
+          <argument type="service" id="form.type_extension.form.data_collector"/>
+        </argument>
+        <argument key="Symfony\Component\Form\Extension\Core\Type\RepeatedType" type="iterator">
+          <argument type="service" id="form.type_extension.repeated.validator"/>
+        </argument>
+        <argument key="Symfony\Component\Form\Extension\Core\Type\SubmitType" type="iterator">
+          <argument type="service" id="form.type_extension.submit.validator"/>
+        </argument>
+      </argument>
+      <argument type="iterator">
+        <argument type="service" id="form.type_guesser.validator"/>
+        <argument type="service" id="form.type_guesser.doctrine"/>
+      </argument>
+    </service>
+    <service id="form.type_guesser.validator" class="Symfony\Component\Form\Extension\Validator\ValidatorTypeGuesser" public="false">
+      <tag name="form.type_guesser"/>
+      <argument type="service" id="debug.validator"/>
+    </service>
+    <service id="form.choice_list_factory.default" class="Symfony\Component\Form\ChoiceList\Factory\DefaultChoiceListFactory" public="false"/>
+    <service id="form.choice_list_factory.property_access" class="Symfony\Component\Form\ChoiceList\Factory\PropertyAccessDecorator" public="false">
+      <argument type="service" id="form.choice_list_factory.default"/>
+      <argument type="service" id="property_accessor"/>
+    </service>
+    <service id="form.choice_list_factory.cached" class="Symfony\Component\Form\ChoiceList\Factory\CachingFactoryDecorator" public="false">
+      <tag name="kernel.reset" method="reset"/>
+      <argument type="service" id="form.choice_list_factory.property_access"/>
+    </service>
+    <service id="form.type.form" class="Symfony\Component\Form\Extension\Core\Type\FormType" public="false">
+      <tag name="form.type"/>
+      <argument type="service" id="property_accessor"/>
+    </service>
+    <service id="form.type.choice" class="Symfony\Component\Form\Extension\Core\Type\ChoiceType" public="false">
+      <tag name="form.type"/>
+      <argument type="service" id="form.choice_list_factory.cached"/>
+    </service>
+    <service id="form.type.file" class="Symfony\Component\Form\Extension\Core\Type\FileType" public="true">
+      <tag name="form.type"/>
+      <argument>null</argument>
+    </service>
+    <service id="form.type_extension.form.transformation_failure_handling" class="Symfony\Component\Form\Extension\Core\Type\TransformationFailureExtension" public="false">
+      <tag name="form.type_extension" extended_type="Symfony\Component\Form\Extension\Core\Type\FormType" extended-type="Symfony\Component\Form\Extension\Core\Type\FormType"/>
+      <argument>null</argument>
+    </service>
+    <service id="form.type_extension.form.http_foundation" class="Symfony\Component\Form\Extension\HttpFoundation\Type\FormTypeHttpFoundationExtension" public="false">
+      <tag name="form.type_extension"/>
+      <argument type="service" id="form.type_extension.form.request_handler"/>
+    </service>
+    <service id="form.type_extension.form.request_handler" class="Symfony\Component\Form\Extension\HttpFoundation\HttpFoundationRequestHandler" public="false">
+      <argument type="service" id="form.server_params"/>
+    </service>
+    <service id="form.server_params" class="Symfony\Component\Form\Util\ServerParams" public="false">
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="form.type_extension.form.validator" class="Symfony\Component\Form\Extension\Validator\Type\FormTypeValidatorExtension" public="false">
+      <tag name="form.type_extension" extended_type="Symfony\Component\Form\Extension\Core\Type\FormType" extended-type="Symfony\Component\Form\Extension\Core\Type\FormType"/>
+      <argument type="service" id="debug.validator"/>
+    </service>
+    <service id="form.type_extension.repeated.validator" class="Symfony\Component\Form\Extension\Validator\Type\RepeatedTypeValidatorExtension" public="false">
+      <tag name="form.type_extension"/>
+    </service>
+    <service id="form.type_extension.submit.validator" class="Symfony\Component\Form\Extension\Validator\Type\SubmitTypeValidatorExtension" public="false">
+      <tag name="form.type_extension" extended_type="Symfony\Component\Form\Extension\Core\Type\SubmitType" extended-type="Symfony\Component\Form\Extension\Core\Type\SubmitType"/>
+    </service>
+    <service id="form.type_extension.csrf" class="Symfony\Component\Form\Extension\Csrf\Type\FormTypeCsrfExtension" public="false">
+      <tag name="form.type_extension"/>
+      <argument type="service" id="security.csrf.token_manager"/>
+      <argument>true</argument>
+      <argument>_token</argument>
+      <argument>null</argument>
+      <argument>validators</argument>
+      <argument type="service" id="form.server_params"/>
     </service>
     <service id="assets.packages" class="Symfony\Component\Asset\Packages" public="false">
       <argument type="service" id="assets._default_package"/>
@@ -1038,8 +1197,8 @@
       <argument type="service" id="assets.empty_version_strategy"/>
       <argument type="service" id="assets.context"/>
     </service>
-    <service id=".1_PhpArrayAdapter~NZ2HOq7" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>/home/elina/nickel/nickel/var/cache/dev/validation.php</argument>
+    <service id=".1_PhpArrayAdapter~h_p0zwm" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+      <argument>/home/elina/derniér/nickel/var/cache/dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -1049,6 +1208,11 @@
       </call>
       <call method="setTranslationDomain">
         <argument>validators</argument>
+      </call>
+      <call method="addXmlMappings">
+        <argument type="collection">
+          <argument>/home/elina/derniér/nickel/vendor/symfony/form/Resources/config/validation.xml</argument>
+        </argument>
       </call>
       <call method="enableAnnotationMapping">
         <argument type="service" id="annotations.cached_reader"/>
@@ -1069,10 +1233,10 @@
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/validation.php</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/validation.php</argument>
     </service>
     <service id="validator.mapping.cache.symfony" class="Symfony\Component\Validator\Mapping\Cache\Psr6Cache" public="false">
-      <argument type="service" id=".1_PhpArrayAdapter~NZ2HOq7"/>
+      <argument type="service" id=".1_PhpArrayAdapter~h_p0zwm"/>
     </service>
     <service id="validator.validator_factory" class="Symfony\Component\Validator\ContainerConstraintValidatorFactory" public="false">
       <argument type="service" id=".service_locator.LtnrEkg"/>
@@ -1116,6 +1280,9 @@
         <argument type="service" id="data_collector.ajax"/>
       </call>
       <call method="add">
+        <argument type="service" id="data_collector.form"/>
+      </call>
+      <call method="add">
         <argument type="service" id="data_collector.exception"/>
       </call>
       <call method="add">
@@ -1144,7 +1311,7 @@
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
-      <argument>file:/home/elina/nickel/nickel/var/cache/dev/profiler</argument>
+      <argument>file:/home/elina/derniér/nickel/var/cache/dev/profiler</argument>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener" public="false">
       <tag name="kernel.event_subscriber"/>
@@ -1182,7 +1349,7 @@
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <tag name="monolog.logger" channel="profiler"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/srcApp_KernelDevDebugContainer</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/srcApp_KernelDevDebugContainer</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector" public="false">
@@ -1253,6 +1420,16 @@
         <argument type="service" id="api_platform.cache.metadata.property"/>
       </call>
     </service>
+    <service id=".1_ResolvedFormTypeFactory~h.nrdVi" class="Symfony\Component\Form\ResolvedFormTypeFactory" public="false"/>
+    <service id="form.type_extension.form.data_collector" class="Symfony\Component\Form\Extension\DataCollector\Type\DataCollectorTypeExtension" public="false">
+      <tag name="form.type_extension"/>
+      <argument type="service" id="data_collector.form"/>
+    </service>
+    <service id="data_collector.form.extractor" class="Symfony\Component\Form\Extension\DataCollector\FormDataExtractor" public="false"/>
+    <service id="data_collector.form" class="Symfony\Component\Form\Extension\DataCollector\FormDataCollector" public="false">
+      <tag name="data_collector" template="@WebProfiler/Collector/form.html.twig" id="form" priority="310"/>
+      <argument type="service" id="data_collector.form.extractor"/>
+    </service>
     <service id="debug.validator" class="Symfony\Component\Validator\Validator\TraceableValidator" public="false">
       <tag name="kernel.reset" method="reset"/>
       <argument type="service" id="debug.validator.inner"/>
@@ -1295,7 +1472,7 @@
     <service id="debug.file_link_formatter" class="Symfony\Component\HttpKernel\Debug\FileLinkFormatter" public="false">
       <argument>null</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
-      <argument>/home/elina/nickel/nickel</argument>
+      <argument>/home/elina/derniér/nickel</argument>
       <argument type="service" id="debug.file_link_formatter.url_format"/>
     </service>
     <service id="debug.stopwatch" class="Symfony\Component\Stopwatch\Stopwatch">
@@ -1437,6 +1614,30 @@
           <argument>onKernelRequest</argument>
         </argument>
         <argument>1</argument>
+      </call>
+      <call method="addListener">
+        <argument>kernel.request</argument>
+        <argument type="collection">
+          <argument type="service" id="fos_rest.body_listener"/>
+          <argument>onKernelRequest</argument>
+        </argument>
+        <argument>10</argument>
+      </call>
+      <call method="addListener">
+        <argument>kernel.request</argument>
+        <argument type="collection">
+          <argument type="service" id="fos_rest.format_listener"/>
+          <argument>onKernelRequest</argument>
+        </argument>
+        <argument>34</argument>
+      </call>
+      <call method="addListener">
+        <argument>kernel.controller</argument>
+        <argument type="collection">
+          <argument type="service" id="fos_rest.param_fetcher_listener"/>
+          <argument>onKernelController</argument>
+        </argument>
+        <argument>5</argument>
       </call>
       <call method="addListener">
         <argument>kernel.response</argument>
@@ -1790,6 +1991,22 @@
         </argument>
         <argument>0</argument>
       </call>
+      <call method="addListener">
+        <argument>kernel.view</argument>
+        <argument type="collection">
+          <argument type="service" id="fos_rest.view_response_listener"/>
+          <argument>onKernelView</argument>
+        </argument>
+        <argument>30</argument>
+      </call>
+      <call method="addListener">
+        <argument>kernel.exception</argument>
+        <argument type="collection">
+          <argument type="service" id="fos_rest.access_denied_listener"/>
+          <argument>onKernelException</argument>
+        </argument>
+        <argument>5</argument>
+      </call>
     </service>
     <service id="debug.controller_resolver" class="Symfony\Component\HttpKernel\Controller\TraceableControllerResolver" public="false">
       <tag name="monolog.logger" channel="request"/>
@@ -1821,6 +2038,18 @@
       </call>
       <call method="addLoader">
         <argument type="service" id="api_platform.route_loader"/>
+      </call>
+      <call method="addLoader">
+        <argument type="service" id="fos_rest.routing.loader.directory"/>
+      </call>
+      <call method="addLoader">
+        <argument type="service" id="fos_rest.routing.loader.controller"/>
+      </call>
+      <call method="addLoader">
+        <argument type="service" id="fos_rest.routing.loader.yaml_collection"/>
+      </call>
+      <call method="addLoader">
+        <argument type="service" id="fos_rest.routing.loader.xml_collection"/>
       </call>
       <call method="addLoader">
         <argument type="service" id="routing.loader.annotation"/>
@@ -1869,7 +2098,7 @@
       <argument type="service" id=".service_locator.MAfdX1A.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">/home/elina/nickel/nickel/var/cache/dev</argument>
+        <argument key="cache_dir">/home/elina/derniér/nickel/var/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -1908,7 +2137,7 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
-      <argument>/home/elina/nickel/nickel</argument>
+      <argument>/home/elina/derniér/nickel</argument>
       <argument>true</argument>
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" class="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" public="true">
@@ -1934,12 +2163,12 @@
       <argument type="service" id="file_locator"/>
       <argument type="service" id="routing.loader.annotation"/>
     </service>
-    <service id=".2_PhpArrayAdapter~8Biq3lV" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>/home/elina/nickel/nickel/var/cache/dev/annotations.php</argument>
+    <service id=".2_PhpArrayAdapter~ZSjIOZa" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+      <argument>/home/elina/derniér/nickel/var/cache/dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
-    <service id=".1_ArrayCache~8Biq3lV" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
+    <service id=".1_ArrayCache~ZSjIOZa" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
     <service id="annotations.reader" class="Doctrine\Common\Annotations\AnnotationReader" public="false">
       <call method="addGlobalIgnoredName">
         <argument>required</argument>
@@ -1954,7 +2183,7 @@
     <service id="annotations.cached_reader" class="Doctrine\Common\Annotations\CachedReader" public="false">
       <tag name="annotations.cached_reader"/>
       <argument type="service" id="annotations.reader"/>
-      <argument type="service" id=".1_ArrayCache~8Biq3lV"/>
+      <argument type="service" id=".1_ArrayCache~ZSjIOZa"/>
       <argument>true</argument>
       <property name="cacheProviderBackup" type="service" id="annotations.cache"/>
     </service>
@@ -1964,12 +2193,12 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/annotations.php</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/annotations.php</argument>
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!AbstractController$|Controller$))#</argument>
       <argument>true</argument>
     </service>
     <service id="annotations.cache" class="Symfony\Component\Cache\DoctrineProvider" public="false">
-      <argument type="service" id=".2_PhpArrayAdapter~8Biq3lV"/>
+      <argument type="service" id=".2_PhpArrayAdapter~ZSjIOZa"/>
     </service>
     <service id="property_accessor" class="Symfony\Component\PropertyAccess\PropertyAccessor" public="false">
       <argument>false</argument>
@@ -1979,6 +2208,7 @@
     </service>
     <service id="serializer" class="Symfony\Component\Serializer\Serializer" public="true">
       <argument type="collection">
+        <argument type="service" id="fos_rest.serializer.form_error_normalizer"/>
         <argument type="service" id="api_platform.swagger.normalizer.api_gateway"/>
         <argument type="service" id="api_platform.hydra.normalizer.constraint_violation_list"/>
         <argument type="service" id="api_platform.problem.normalizer.constraint_violation_list"/>
@@ -2064,10 +2294,10 @@
           </service>
         </argument>
       </argument>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/serialization.php</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/serialization.php</argument>
     </service>
     <service id="serializer.mapping.cache.symfony" class="Psr\Cache\CacheItemPoolInterface" public="false">
-      <argument>/home/elina/nickel/nickel/var/cache/dev/serialization.php</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/serialization.php</argument>
       <argument type="service" id="cache.serializer"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -2134,32 +2364,32 @@
     </service>
     <service id="web_server.command.server_run" class="Symfony\Bundle\WebServerBundle\Command\ServerRunCommand" public="false">
       <tag name="console.command" command="server:run"/>
-      <argument>/home/elina/nickel/nickel/public</argument>
+      <argument>/home/elina/derniér/nickel/public</argument>
       <argument>dev</argument>
-      <argument>/home/elina/nickel/nickel/var/cache</argument>
+      <argument>/home/elina/derniér/nickel/var/cache</argument>
       <call method="setName">
         <argument>server:run</argument>
       </call>
     </service>
     <service id="web_server.command.server_start" class="Symfony\Bundle\WebServerBundle\Command\ServerStartCommand" public="false">
       <tag name="console.command" command="server:start"/>
-      <argument>/home/elina/nickel/nickel/public</argument>
+      <argument>/home/elina/derniér/nickel/public</argument>
       <argument>dev</argument>
-      <argument>/home/elina/nickel/nickel/var/cache</argument>
+      <argument>/home/elina/derniér/nickel/var/cache</argument>
       <call method="setName">
         <argument>server:start</argument>
       </call>
     </service>
     <service id="web_server.command.server_stop" class="Symfony\Bundle\WebServerBundle\Command\ServerStopCommand" public="false">
       <tag name="console.command" command="server:stop"/>
-      <argument>/home/elina/nickel/nickel/var/cache</argument>
+      <argument>/home/elina/derniér/nickel/var/cache</argument>
       <call method="setName">
         <argument>server:stop</argument>
       </call>
     </service>
     <service id="web_server.command.server_status" class="Symfony\Bundle\WebServerBundle\Command\ServerStatusCommand" public="false">
       <tag name="console.command" command="server:status"/>
-      <argument>/home/elina/nickel/nickel/var/cache</argument>
+      <argument>/home/elina/derniér/nickel/var/cache</argument>
       <call method="setName">
         <argument>server:status</argument>
       </call>
@@ -2167,7 +2397,7 @@
     <service id="twig" class="Twig\Environment" public="true">
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
-        <argument key="default_path">/home/elina/nickel/nickel/templates</argument>
+        <argument key="default_path">/home/elina/derniér/nickel/templates</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
         <argument key="exception_controller">twig.controller.exception::showAction</argument>
@@ -2175,7 +2405,7 @@
           <argument>form_div_layout.html.twig</argument>
         </argument>
         <argument key="autoescape">name</argument>
-        <argument key="cache">/home/elina/nickel/nickel/var/cache/dev/twig</argument>
+        <argument key="cache">/home/elina/derniér/nickel/var/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="paths" type="collection"/>
         <argument key="date" type="collection">
@@ -2226,6 +2456,9 @@
         <argument type="service" id="twig.extension.weblink"/>
       </call>
       <call method="addExtension">
+        <argument type="service" id="twig.extension.form"/>
+      </call>
+      <call method="addExtension">
         <argument type="service" id="twig.extension.logout_url"/>
       </call>
       <call method="addExtension">
@@ -2268,13 +2501,17 @@
       <tag name="container.service_subscriber" id="twig"/>
       <argument type="service" id=".service_locator.lSIKWsr.twig.cache_warmer"/>
       <argument>null</argument>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument key="/home/elina/derniér/nickel/vendor/symfony/twig-bridge/Resources/views/Form">null</argument>
+      </argument>
     </service>
     <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator" public="false">
       <argument type="service" id="kernel"/>
-      <argument>/home/elina/nickel/nickel/src</argument>
-      <argument type="collection"/>
-      <argument>/home/elina/nickel/nickel/templates</argument>
+      <argument>/home/elina/derniér/nickel/src</argument>
+      <argument type="collection">
+        <argument key="/home/elina/derniér/nickel/vendor/symfony/twig-bridge/Resources/views/Form">null</argument>
+      </argument>
+      <argument>/home/elina/derniér/nickel/templates</argument>
     </service>
     <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
@@ -2285,57 +2522,60 @@
     <service id="twig.loader.native_filesystem" class="Symfony\Bundle\TwigBundle\Loader\NativeFilesystemLoader" public="false">
       <tag name="twig.loader"/>
       <argument type="collection"/>
-      <argument>/home/elina/nickel/nickel</argument>
+      <argument>/home/elina/derniér/nickel</argument>
       <call method="addPath">
-        <argument>/home/elina/nickel/nickel/vendor/symfony/framework-bundle/Resources/views</argument>
+        <argument>/home/elina/derniér/nickel/vendor/symfony/framework-bundle/Resources/views</argument>
         <argument>Framework</argument>
       </call>
       <call method="addPath">
-        <argument>/home/elina/nickel/nickel/vendor/symfony/framework-bundle/Resources/views</argument>
+        <argument>/home/elina/derniér/nickel/vendor/symfony/framework-bundle/Resources/views</argument>
         <argument>!Framework</argument>
       </call>
       <call method="addPath">
-        <argument>/home/elina/nickel/nickel/vendor/symfony/twig-bundle/Resources/views</argument>
+        <argument>/home/elina/derniér/nickel/vendor/symfony/twig-bundle/Resources/views</argument>
         <argument>Twig</argument>
       </call>
       <call method="addPath">
-        <argument>/home/elina/nickel/nickel/vendor/symfony/twig-bundle/Resources/views</argument>
+        <argument>/home/elina/derniér/nickel/vendor/symfony/twig-bundle/Resources/views</argument>
         <argument>!Twig</argument>
       </call>
       <call method="addPath">
-        <argument>/home/elina/nickel/nickel/vendor/symfony/web-profiler-bundle/Resources/views</argument>
+        <argument>/home/elina/derniér/nickel/vendor/symfony/web-profiler-bundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>/home/elina/nickel/nickel/vendor/symfony/web-profiler-bundle/Resources/views</argument>
+        <argument>/home/elina/derniér/nickel/vendor/symfony/web-profiler-bundle/Resources/views</argument>
         <argument>!WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>/home/elina/nickel/nickel/vendor/doctrine/doctrine-bundle/Resources/views</argument>
+        <argument>/home/elina/derniér/nickel/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/home/elina/nickel/nickel/vendor/doctrine/doctrine-bundle/Resources/views</argument>
+        <argument>/home/elina/derniér/nickel/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>!Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/home/elina/nickel/nickel/vendor/symfony/security-bundle/Resources/views</argument>
+        <argument>/home/elina/derniér/nickel/vendor/symfony/security-bundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>/home/elina/nickel/nickel/vendor/symfony/security-bundle/Resources/views</argument>
+        <argument>/home/elina/derniér/nickel/vendor/symfony/security-bundle/Resources/views</argument>
         <argument>!Security</argument>
       </call>
       <call method="addPath">
-        <argument>/home/elina/nickel/nickel/vendor/api-platform/core/src/Bridge/Symfony/Bundle/Resources/views</argument>
+        <argument>/home/elina/derniér/nickel/vendor/api-platform/core/src/Bridge/Symfony/Bundle/Resources/views</argument>
         <argument>ApiPlatform</argument>
       </call>
       <call method="addPath">
-        <argument>/home/elina/nickel/nickel/vendor/api-platform/core/src/Bridge/Symfony/Bundle/Resources/views</argument>
+        <argument>/home/elina/derniér/nickel/vendor/api-platform/core/src/Bridge/Symfony/Bundle/Resources/views</argument>
         <argument>!ApiPlatform</argument>
       </call>
       <call method="addPath">
-        <argument>/home/elina/nickel/nickel/templates</argument>
+        <argument>/home/elina/derniér/nickel/templates</argument>
+      </call>
+      <call method="addPath">
+        <argument>/home/elina/derniér/nickel/vendor/symfony/twig-bridge/Resources/views/Form</argument>
       </call>
     </service>
     <service id="twig.loader.chain" class="Twig\Loader\ChainLoader" public="false"/>
@@ -2361,7 +2601,7 @@
     <service id="twig.extension.code" class="Symfony\Bridge\Twig\Extension\CodeExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
-      <argument>/home/elina/nickel/nickel</argument>
+      <argument>/home/elina/derniér/nickel</argument>
       <argument>UTF-8</argument>
     </service>
     <service id="twig.extension.routing" class="Symfony\Bridge\Twig\Extension\RoutingExtension" public="false">
@@ -2421,15 +2661,31 @@
       <argument>,</argument>
     </service>
     <service id="twig.runtime_loader" class="Twig\RuntimeLoader\ContainerRuntimeLoader" public="false">
-      <argument type="service" id=".service_locator.xEWwCJt"/>
+      <argument type="service" id=".service_locator.uxa.tru"/>
+    </service>
+    <service id="twig.extension.form" class="Symfony\Bridge\Twig\Extension\FormExtension" public="false">
+      <tag name="twig.extension"/>
+      <argument type="collection">
+        <argument type="service" id="service_container"/>
+        <argument>twig.form.renderer</argument>
+      </argument>
+    </service>
+    <service id="twig.form.engine" class="Symfony\Bridge\Twig\Form\TwigRendererEngine" public="false">
+      <argument>%twig.form.resources%</argument>
+      <argument type="service" id="twig"/>
+    </service>
+    <service id="twig.form.renderer" class="Symfony\Component\Form\FormRenderer" public="false">
+      <tag name="twig.runtime"/>
+      <argument type="service" id="twig.form.engine"/>
+      <argument type="service" id="security.csrf.token_manager" on-invalid="null"/>
     </service>
     <service id="twig.command.debug" class="Symfony\Bridge\Twig\Command\DebugCommand" public="false">
       <tag name="console.command" command="debug:twig"/>
       <argument type="service" id="twig"/>
-      <argument>/home/elina/nickel/nickel</argument>
+      <argument>/home/elina/derniér/nickel</argument>
       <argument>%kernel.bundles_metadata%</argument>
-      <argument>/home/elina/nickel/nickel/templates</argument>
-      <argument>/home/elina/nickel/nickel/src</argument>
+      <argument>/home/elina/derniér/nickel/templates</argument>
+      <argument>/home/elina/derniér/nickel/src</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
       <call method="setName">
         <argument>debug:twig</argument>
@@ -2442,7 +2698,7 @@
         <argument>lint:twig</argument>
       </call>
     </service>
-    <service id=".2_HtmlDumper~kgkJOPc" class="Symfony\Component\VarDumper\Dumper\HtmlDumper" public="false">
+    <service id=".2_HtmlDumper~d5ccnSE" class="Symfony\Component\VarDumper\Dumper\HtmlDumper" public="false">
       <argument>null</argument>
       <argument>UTF-8</argument>
       <argument>1</argument>
@@ -2453,14 +2709,14 @@
         </argument>
       </call>
     </service>
-    <service id=".1_NonceGenerator~kgkJOPc" class="Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator" public="false"/>
+    <service id=".1_NonceGenerator~d5ccnSE" class="Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator" public="false"/>
     <service id="web_profiler.controller.profiler" class="Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController" public="true">
       <argument type="service" id="router.default" on-invalid="null"/>
       <argument type="service" id="profiler" on-invalid="null"/>
       <argument type="service" id="twig"/>
       <argument>%data_collector.templates%</argument>
       <argument type="service" id="web_profiler.csp.handler"/>
-      <argument>/home/elina/nickel/nickel</argument>
+      <argument>/home/elina/derniér/nickel</argument>
     </service>
     <service id="web_profiler.controller.router" class="Symfony\Bundle\WebProfilerBundle\Controller\RouterController" public="true">
       <argument type="service" id="profiler" on-invalid="null"/>
@@ -2474,11 +2730,11 @@
       <argument type="service" id="debug.file_link_formatter"/>
     </service>
     <service id="web_profiler.csp.handler" class="Symfony\Bundle\WebProfilerBundle\Csp\ContentSecurityPolicyHandler" public="false">
-      <argument type="service" id=".1_NonceGenerator~kgkJOPc"/>
+      <argument type="service" id=".1_NonceGenerator~d5ccnSE"/>
     </service>
     <service id="twig.extension.webprofiler" class="Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension" public="false">
       <tag name="twig.extension"/>
-      <argument type="service" id=".2_HtmlDumper~kgkJOPc"/>
+      <argument type="service" id=".2_HtmlDumper~d5ccnSE"/>
     </service>
     <service id="debug.file_link_formatter.url_format" class="string" public="false">
       <argument type="service" id="router.default"/>
@@ -2638,7 +2894,7 @@
       <argument type="collection"/>
       <factory service="doctrine.dbal.connection_factory" method="createConnection"/>
     </service>
-    <service id=".1_ServiceLocator~sf0KdTK" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".1_ServiceLocator~814QNLN" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <argument type="collection"/>
     </service>
     <service id="doctrine.orm.proxy_cache_warmer" class="Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer" public="false">
@@ -2651,6 +2907,7 @@
     </service>
     <service id="form.type.entity" class="Symfony\Bridge\Doctrine\Form\Type\EntityType">
       <tag name="form.type" alias="entity"/>
+      <tag name="kernel.reset" method="reset"/>
       <argument type="service" id="doctrine"/>
     </service>
     <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" public="false" abstract="true"/>
@@ -2797,7 +3054,7 @@
         <argument type="service" id="doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>/home/elina/nickel/nickel/var/cache/dev/doctrine/orm/Proxies</argument>
+        <argument>/home/elina/derniér/nickel/var/cache/dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -2827,7 +3084,7 @@
     <service id="doctrine.orm.default_annotation_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
       <argument type="service" id="annotations.cached_reader"/>
       <argument type="collection">
-        <argument>/home/elina/nickel/nickel/src/Entity</argument>
+        <argument>/home/elina/derniér/nickel/src/Entity</argument>
       </argument>
     </service>
     <service id="doctrine.orm.default_metadata_driver" class="Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain" public="false">
@@ -2838,17 +3095,17 @@
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_metadata_cache" class="Doctrine\Common\Cache\ArrayCache" public="true">
       <call method="setNamespace">
-        <argument>sf_orm_default_355a4e3e911a98e14a921a7256c53370162f46cfb2a7cca5a9f6677bda109a2a</argument>
+        <argument>sf_orm_default_da0bf5c55dda5308228aaa2b9800d0650e317158bb753262c56194e52bd09027</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_result_cache" class="Doctrine\Common\Cache\ArrayCache" public="true">
       <call method="setNamespace">
-        <argument>sf_orm_default_355a4e3e911a98e14a921a7256c53370162f46cfb2a7cca5a9f6677bda109a2a</argument>
+        <argument>sf_orm_default_da0bf5c55dda5308228aaa2b9800d0650e317158bb753262c56194e52bd09027</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_query_cache" class="Doctrine\Common\Cache\ArrayCache" public="true">
       <call method="setNamespace">
-        <argument>sf_orm_default_355a4e3e911a98e14a921a7256c53370162f46cfb2a7cca5a9f6677bda109a2a</argument>
+        <argument>sf_orm_default_da0bf5c55dda5308228aaa2b9800d0650e317158bb753262c56194e52bd09027</argument>
       </call>
     </service>
     <service id="doctrine.orm.default_entity_listener_resolver" class="Doctrine\Bundle\DoctrineBundle\Mapping\ContainerEntityListenerResolver">
@@ -2911,8 +3168,8 @@
     <service id="maker.file_manager" class="Symfony\Bundle\MakerBundle\FileManager" public="false">
       <argument type="service" id="filesystem"/>
       <argument type="service" id="maker.autoloader_util"/>
-      <argument>/home/elina/nickel/nickel</argument>
-      <argument>/home/elina/nickel/nickel/templates</argument>
+      <argument>/home/elina/derniér/nickel</argument>
+      <argument>/home/elina/derniér/nickel/templates</argument>
     </service>
     <service id="maker.autoloader_finder" class="Symfony\Bundle\MakerBundle\Util\ComposerAutoloaderFinder" public="false">
       <argument>App</argument>
@@ -2970,7 +3227,7 @@
       <tag name="maker.command"/>
       <argument type="service" id="maker.file_manager"/>
       <argument type="service" id="maker.doctrine_helper"/>
-      <argument>/home/elina/nickel/nickel</argument>
+      <argument>/home/elina/derniér/nickel</argument>
       <argument type="service" id="maker.generator"/>
     </service>
     <service id="maker.maker.make_fixtures" class="Symfony\Bundle\MakerBundle\Maker\MakeFixtures" public="false">
@@ -3020,7 +3277,7 @@
     </service>
     <service id="maker.maker.make_migration" class="Symfony\Bundle\MakerBundle\Maker\MakeMigration" public="false">
       <tag name="maker.command"/>
-      <argument>/home/elina/nickel/nickel</argument>
+      <argument>/home/elina/derniér/nickel</argument>
     </service>
     <service id="sensio_framework_extra.controller.listener" class="Sensio\Bundle\FrameworkExtraBundle\EventListener\ControllerListener" public="false">
       <tag name="kernel.event_subscriber"/>
@@ -3509,6 +3766,16 @@
     <service id="security.rememberme.response_listener" class="Symfony\Component\Security\Http\RememberMe\ResponseListener" public="false">
       <tag name="kernel.event_subscriber"/>
       <tag name="container.hot_path"/>
+    </service>
+    <service id="templating.helper.logout_url" class="Symfony\Bundle\SecurityBundle\Templating\Helper\LogoutUrlHelper" public="false">
+      <tag name="templating.helper" alias="logout_url"/>
+      <argument type="service" id="security.logout_url_generator"/>
+      <deprecated>The "%service_id%" service is deprecated since Symfony 4.3 and will be removed in 5.0.</deprecated>
+    </service>
+    <service id="templating.helper.security" class="Symfony\Bundle\SecurityBundle\Templating\Helper\SecurityHelper" public="false">
+      <tag name="templating.helper" alias="security"/>
+      <argument type="service" id="security.authorization_checker" on-invalid="ignore"/>
+      <deprecated>The "%service_id%" service is deprecated since Symfony 4.3 and will be removed in 5.0.</deprecated>
     </service>
     <service id="twig.extension.logout_url" class="Symfony\Bridge\Twig\Extension\LogoutUrlExtension" public="false">
       <tag name="twig.extension"/>
@@ -4600,6 +4867,198 @@
     <service id="lexik_jwt_authentication.security.jwt_user_provider" class="Lexik\Bundle\JWTAuthenticationBundle\Security\User\JWTUserProvider" public="false">
       <argument></argument>
     </service>
+    <service id="fos_rest.view_handler.default" class="FOS\RestBundle\View\ViewHandler" public="false">
+      <tag name="kernel.reset" method="reset"/>
+      <argument type="service" id="router.default"/>
+      <argument type="service" id="fos_rest.serializer.symfony"/>
+      <argument>null</argument>
+      <argument type="service" id="request_stack"/>
+      <argument type="collection">
+        <argument key="json">false</argument>
+        <argument key="html">true</argument>
+      </argument>
+      <argument>400</argument>
+      <argument>204</argument>
+      <argument>false</argument>
+      <argument type="collection">
+        <argument key="html">302</argument>
+      </argument>
+      <argument>twig</argument>
+      <argument type="collection">
+        <argument key="serializeNullStrategy">false</argument>
+      </argument>
+    </service>
+    <service id="fos_rest.view_handler.jsonp" class="FOS\RestBundle\View\JsonpHandler" public="false">
+      <argument></argument>
+    </service>
+    <service id="fos_rest.routing.loader.directory" class="FOS\RestBundle\Routing\Loader\DirectoryRouteLoader" public="false">
+      <tag name="routing.loader"/>
+      <argument type="service" id="file_locator"/>
+      <argument type="service" id="fos_rest.routing.loader.processor"/>
+    </service>
+    <service id="fos_rest.routing.loader.controller" class="FOS\RestBundle\Routing\Loader\RestRouteLoader" public="false">
+      <tag name="routing.loader"/>
+      <argument type="service" id="service_container"/>
+      <argument type="service" id="file_locator"/>
+      <argument type="service" id="controller_name_converter"/>
+      <argument type="service" id="fos_rest.routing.loader.reader.controller"/>
+      <argument>json</argument>
+    </service>
+    <service id="fos_rest.routing.loader.processor" class="FOS\RestBundle\Routing\Loader\RestRouteProcessor" public="false"/>
+    <service id="fos_rest.routing.loader.yaml_collection" class="FOS\RestBundle\Routing\Loader\RestYamlCollectionLoader" public="false">
+      <tag name="routing.loader"/>
+      <argument type="service" id="file_locator"/>
+      <argument type="service" id="fos_rest.routing.loader.processor"/>
+      <argument>false</argument>
+      <argument type="collection">
+        <argument key="json">false</argument>
+        <argument key="html">true</argument>
+      </argument>
+      <argument>json</argument>
+    </service>
+    <service id="fos_rest.routing.loader.xml_collection" class="FOS\RestBundle\Routing\Loader\RestXmlCollectionLoader" public="false">
+      <tag name="routing.loader"/>
+      <argument type="service" id="file_locator"/>
+      <argument type="service" id="fos_rest.routing.loader.processor"/>
+      <argument>false</argument>
+      <argument type="collection">
+        <argument key="json">false</argument>
+        <argument key="html">true</argument>
+      </argument>
+      <argument>json</argument>
+    </service>
+    <service id="fos_rest.routing.loader.reader.controller" class="FOS\RestBundle\Routing\Loader\Reader\RestControllerReader" public="false">
+      <argument type="service" id="fos_rest.routing.loader.reader.action"/>
+      <argument type="service" id="annotations.cached_reader"/>
+    </service>
+    <service id="fos_rest.routing.loader.reader.action" class="FOS\RestBundle\Routing\Loader\Reader\RestActionReader" public="false">
+      <argument type="service" id="annotations.cached_reader"/>
+      <argument type="service" id="fos_rest.request.param_fetcher.reader"/>
+      <argument type="service" id="fos_rest.inflector.doctrine"/>
+      <argument>false</argument>
+      <argument type="collection">
+        <argument key="json">false</argument>
+        <argument key="html">true</argument>
+      </argument>
+      <argument>true</argument>
+    </service>
+    <service id="fos_rest.inflector.doctrine" class="FOS\RestBundle\Inflector\DoctrineInflector" public="false"/>
+    <service id="fos_rest.request.param_fetcher" class="FOS\RestBundle\Request\ParamFetcher">
+      <argument type="service" id="service_container"/>
+      <argument type="service" id="fos_rest.request.param_fetcher.reader"/>
+      <argument type="service" id="request_stack"/>
+      <argument type="service" id="debug.validator" on-invalid="null"/>
+    </service>
+    <service id="fos_rest.request.param_fetcher.reader" class="FOS\RestBundle\Request\ParamReader" public="false">
+      <argument type="service" id="annotations.cached_reader"/>
+    </service>
+    <service id="fos_rest.serializer.jms" class="FOS\RestBundle\Serializer\JMSSerializerAdapter" public="false" lazy="true">
+      <argument type="service" id="jms_serializer.serializer"/>
+      <argument type="service" id="jms_serializer.serialization_context_factory"/>
+      <argument type="service" id="jms_serializer.deserialization_context_factory"/>
+    </service>
+    <service id="fos_rest.serializer.symfony" class="FOS\RestBundle\Serializer\SymfonySerializerAdapter" public="false" lazy="true">
+      <argument type="service" id="serializer"/>
+    </service>
+    <service id="fos_rest.serializer.form_error_normalizer" class="FOS\RestBundle\Serializer\Normalizer\FormErrorNormalizer" public="false">
+      <tag name="serializer.normalizer" priority="-10"/>
+    </service>
+    <service id="fos_rest.view_response_listener" class="FOS\RestBundle\EventListener\ViewResponseListener">
+      <tag name="kernel.event_subscriber"/>
+      <argument type="service" id="fos_rest.view_handler.default"/>
+      <argument>true</argument>
+    </service>
+    <service id="fos_rest.normalizer.camel_keys" class="FOS\RestBundle\Normalizer\CamelKeysNormalizer"/>
+    <service id="fos_rest.normalizer.camel_keys_with_leading_underscore" class="FOS\RestBundle\Normalizer\CamelKeysNormalizerWithLeadingUnderscore"/>
+    <service id="fos_rest.decoder.json" class="FOS\RestBundle\Decoder\JsonDecoder"/>
+    <service id="fos_rest.decoder.jsontoform" class="FOS\RestBundle\Decoder\JsonToFormDecoder"/>
+    <service id="fos_rest.decoder.xml" class="FOS\RestBundle\Decoder\XmlDecoder"/>
+    <service id="fos_rest.decoder_provider" class="FOS\RestBundle\Decoder\ContainerDecoderProvider">
+      <argument type="service" id=".service_locator.kuaDcLh"/>
+      <argument type="collection">
+        <argument key="json">fos_rest.decoder.json</argument>
+        <argument key="xml">fos_rest.decoder.xml</argument>
+      </argument>
+    </service>
+    <service id="fos_rest.body_listener" class="FOS\RestBundle\EventListener\BodyListener">
+      <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest" priority="10"/>
+      <tag name="container.hot_path"/>
+      <argument type="service" id="fos_rest.decoder_provider"/>
+      <argument>false</argument>
+      <call method="setDefaultFormat">
+        <argument>null</argument>
+      </call>
+    </service>
+    <service id=".service_locator.kuaDcLh" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="fos_rest.decoder.json" type="service" id="fos_rest.decoder.json"/>
+        <argument key="fos_rest.decoder.xml" type="service" id="fos_rest.decoder.xml"/>
+      </argument>
+    </service>
+    <service id="fos_rest.format_listener" class="FOS\RestBundle\EventListener\FormatListener">
+      <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest" priority="34"/>
+      <tag name="container.hot_path"/>
+      <argument type="service" id="fos_rest.format_negotiator"/>
+    </service>
+    <service id="fos_rest.format_negotiator" class="FOS\RestBundle\Negotiation\FormatNegotiator">
+      <argument type="service" id="request_stack"/>
+      <call method="add">
+        <argument type="service" id="fos_rest.request_matcher.6d27357678da78ac461e8b851ac5bf83a1f9471f9d410dff7d760712cb7770b80848bf9c"/>
+        <argument type="collection">
+          <argument key="methods">null</argument>
+          <argument key="priorities" type="collection">
+            <argument>html</argument>
+            <argument>json</argument>
+          </argument>
+          <argument key="fallback_format">html</argument>
+          <argument key="attributes" type="collection"/>
+          <argument key="prefer_extension">2.0</argument>
+        </argument>
+      </call>
+      <call method="add">
+        <argument type="service" id="fos_rest.request_matcher.2364365e6bb6bfd5cadeda231e59db9139fadac2b673beb794ba3c0068839a899dc3c386"/>
+        <argument type="collection">
+          <argument key="prefer_extension">2.0</argument>
+          <argument key="fallback_format">json</argument>
+          <argument key="priorities" type="collection">
+            <argument>json</argument>
+          </argument>
+          <argument key="methods">null</argument>
+          <argument key="attributes" type="collection"/>
+          <argument key="stop">false</argument>
+        </argument>
+      </call>
+      <call method="add">
+        <argument type="service" id="fos_rest.request_matcher.69e9d3fd562e0ecffc5bce0c68d3b7a673d187934b742bc76452558275bbd7611198d478"/>
+        <argument type="collection">
+          <argument key="priorities" type="collection">
+            <argument>html</argument>
+            <argument>*/*</argument>
+          </argument>
+          <argument key="fallback_format">html</argument>
+          <argument key="prefer_extension">2.0</argument>
+          <argument key="methods">null</argument>
+          <argument key="attributes" type="collection"/>
+          <argument key="stop">false</argument>
+        </argument>
+      </call>
+    </service>
+    <service id="fos_rest.format_request_matcher" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false" abstract="true"/>
+    <service id="fos_rest.param_fetcher_listener" class="FOS\RestBundle\EventListener\ParamFetcherListener">
+      <tag name="kernel.event_listener" event="kernel.controller" method="onKernelController" priority="5"/>
+      <tag name="container.hot_path"/>
+      <argument type="service" id="fos_rest.request.param_fetcher"/>
+      <argument>false</argument>
+    </service>
+    <service id="fos_rest.access_denied_listener" class="FOS\RestBundle\EventListener\AccessDeniedListener">
+      <tag name="kernel.event_subscriber"/>
+      <tag name="monolog.logger" channel="request"/>
+      <argument type="collection">
+        <argument key="json">true</argument>
+      </argument>
+      <argument>null</argument>
+    </service>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AuthentificationController" class="App\Controller\AuthentificationController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AuthentificationController" class="App\Controller\AuthentificationController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AuthentificationController" class="App\Controller\AuthentificationController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4608,6 +5067,14 @@
     <service id=".abstract.instanceof.App\Controller\ServiceController" class="App\Controller\ServiceController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\AppFixtures" class="App\DataFixtures\AppFixtures" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CompteType" class="App\Form\CompteType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\CompteType" class="App\Form\CompteType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\DepotType" class="App\Form\DepotType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\DepotType" class="App\Form\DepotType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PartenaireType" class="App\Form\PartenaireType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\PartenaireType" class="App\Form\PartenaireType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UserType" class="App\Form\UserType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\UserType" class="App\Form\UserType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\CompteRepository" class="App\Repository\CompteRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\CompteRepository" class="App\Repository\CompteRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\DepotRepository" class="App\Repository\DepotRepository" autowire="true" abstract="true"/>
@@ -4785,27 +5252,23 @@
         <argument key="passwordEncoder" type="service" id="security.user_password_encoder.generic"/>
       </argument>
     </service>
-    <service id=".service_locator.ZIsCxOI" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator"/>
-      <argument type="collection">
-        <argument key="entityManager" type="service" id="doctrine.orm.default_entity_manager"/>
-      </argument>
-    </service>
-    <service id=".service_locator.bqQroai" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.Xlha9RZ" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AuthentificationController::index" type="service" id=".service_locator.JBoVXlr"/>
+        <argument key="App\Controller\ServiceController::addadmin" type="service" id=".service_locator.JBoVXlr"/>
         <argument key="App\Controller\ServiceController::adduser" type="service" id=".service_locator.JBoVXlr"/>
+        <argument key="App\Controller\ServiceController::admin" type="service" id=".service_locator.JBoVXlr"/>
+        <argument key="App\Controller\ServiceController::ajout" type="service" id=".service_locator.JBoVXlr"/>
         <argument key="App\Controller\ServiceController::argent" type="service" id=".service_locator.JBoVXlr"/>
-        <argument key="App\Controller\ServiceController::depotargent" type="service" id=".service_locator.ZIsCxOI"/>
-        <argument key="App\Controller\ServiceController::index" type="service" id=".service_locator.JBoVXlr"/>
-        <argument key="App\Controller\ServiceController::user" type="service" id=".service_locator.JBoVXlr"/>
+        <argument key="App\Controller\ServiceController::caissier" type="service" id=".service_locator.JBoVXlr"/>
         <argument key="App\Controller\AuthentificationController:index" type="service" id=".service_locator.JBoVXlr"/>
+        <argument key="App\Controller\ServiceController:addadmin" type="service" id=".service_locator.JBoVXlr"/>
         <argument key="App\Controller\ServiceController:adduser" type="service" id=".service_locator.JBoVXlr"/>
+        <argument key="App\Controller\ServiceController:admin" type="service" id=".service_locator.JBoVXlr"/>
+        <argument key="App\Controller\ServiceController:ajout" type="service" id=".service_locator.JBoVXlr"/>
         <argument key="App\Controller\ServiceController:argent" type="service" id=".service_locator.JBoVXlr"/>
-        <argument key="App\Controller\ServiceController:depotargent" type="service" id=".service_locator.ZIsCxOI"/>
-        <argument key="App\Controller\ServiceController:index" type="service" id=".service_locator.JBoVXlr"/>
-        <argument key="App\Controller\ServiceController:user" type="service" id=".service_locator.JBoVXlr"/>
+        <argument key="App\Controller\ServiceController:caissier" type="service" id=".service_locator.JBoVXlr"/>
       </argument>
     </service>
     <service id=".service_locator.LtnrEkg" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -4867,6 +5330,19 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
+    <service id=".service_locator.uuNozL3" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="App\Form\CompteType" type="service" id="App\Form\CompteType"/>
+        <argument key="App\Form\DepotType" type="service" id="App\Form\DepotType"/>
+        <argument key="App\Form\PartenaireType" type="service" id="App\Form\PartenaireType"/>
+        <argument key="App\Form\UserType" type="service" id="App\Form\UserType"/>
+        <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
+        <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service" id="form.type.choice"/>
+        <argument key="Symfony\Component\Form\Extension\Core\Type\FileType" type="service" id="form.type.file"/>
+        <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="service" id="form.type.form"/>
+      </argument>
+    </service>
     <service id=".service_locator.Otd28_S" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -4897,6 +5373,27 @@
     <service id="security.logout.handler.csrf_token_clearing" class="Symfony\Component\Security\Http\Logout\CsrfTokenClearingLogoutHandler" public="false">
       <argument type="service" id="security.csrf.token_storage"/>
     </service>
+    <service id="fos_rest.request_matcher.6d27357678da78ac461e8b851ac5bf83a1f9471f9d410dff7d760712cb7770b80848bf9c" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/_profiler|_wdt/</argument>
+      <argument>null</argument>
+      <argument>null</argument>
+      <argument>null</argument>
+      <argument type="collection"/>
+    </service>
+    <service id="fos_rest.request_matcher.2364365e6bb6bfd5cadeda231e59db9139fadac2b673beb794ba3c0068839a899dc3c386" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/api</argument>
+      <argument>null</argument>
+      <argument>null</argument>
+      <argument>null</argument>
+      <argument type="collection"/>
+    </service>
+    <service id="fos_rest.request_matcher.69e9d3fd562e0ecffc5bce0c68d3b7a673d187934b742bc76452558275bbd7611198d478" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/</argument>
+      <argument>null</argument>
+      <argument>null</argument>
+      <argument>null</argument>
+      <argument type="collection"/>
+    </service>
     <service id="logger" class="Symfony\Component\HttpKernel\Log\Logger" public="false"/>
     <service id=".service_locator.UwRI0uT" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
@@ -4924,6 +5421,7 @@
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="doctrine" type="service" id="doctrine" on-invalid="ignore"/>
+        <argument key="form.factory" type="service" id="form.factory" on-invalid="ignore"/>
         <argument key="http_kernel" type="service" id="http_kernel" on-invalid="ignore"/>
         <argument key="parameter_bag" type="service" id="parameter_bag" on-invalid="ignore"/>
         <argument key="request_stack" type="service" id="request_stack" on-invalid="ignore"/>
@@ -5055,12 +5553,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.bqQroai"/>
+      <argument type="service" id=".service_locator.Xlha9RZ"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.bqQroai"/>
+      <argument type="service" id=".service_locator.Xlha9RZ"/>
     </service>
     <service id="api_platform.swagger.normalizer.api_gateway.inner" class="ApiPlatform\Core\Swagger\Serializer\DocumentationNormalizer" public="false">
       <argument type="service" id="api_platform.metadata.resource.metadata_factory.cached"/>
@@ -5098,7 +5596,7 @@
       <argument type="service" id="api_platform.path_segment_name_generator.underscore"/>
     </service>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
-      <argument type="service" id=".service_locator.ODk93Ew"/>
+      <argument type="service" id=".service_locator.SrZR6To"/>
       <argument type="collection">
         <argument key="about">console.command.about</argument>
         <argument key="assets:install">console.command.assets_install</argument>
@@ -5116,6 +5614,7 @@
         <argument key="debug:router">console.command.router_debug</argument>
         <argument key="router:match">console.command.router_match</argument>
         <argument key="lint:yaml">console.command.yaml_lint</argument>
+        <argument key="debug:form">console.command.form_debug</argument>
         <argument key="server:run">web_server.command.server_run</argument>
         <argument key="server:start">web_server.command.server_start</argument>
         <argument key="server:stop">web_server.command.server_stop</argument>
@@ -5166,7 +5665,7 @@
         <argument key="make:migration">maker.auto_command.make_migration</argument>
       </argument>
     </service>
-    <service id=".service_locator.ODk93Ew" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.SrZR6To" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="console.command.about" type="service" id="console.command.about"/>
@@ -5182,6 +5681,7 @@
         <argument key="console.command.container_debug" type="service" id="console.command.container_debug"/>
         <argument key="console.command.debug_autowiring" type="service" id="console.command.debug_autowiring"/>
         <argument key="console.command.event_dispatcher_debug" type="service" id="console.command.event_dispatcher_debug"/>
+        <argument key="console.command.form_debug" type="service" id="console.command.form_debug"/>
         <argument key="console.command.router_debug" type="service" id="console.command.router_debug"/>
         <argument key="console.command.router_match" type="service" id="console.command.router_match"/>
         <argument key="console.command.yaml_lint" type="service" id="console.command.yaml_lint"/>
@@ -5236,116 +5736,117 @@
       </argument>
     </service>
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="false">
-      <argument>AnQ+ibLfPe</argument>
+      <argument>tf4Sua8xtA</argument>
       <argument>0</argument>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/pools</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
       </call>
     </service>
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>6OTeCv3G-W</argument>
+      <argument>hXjt0QYKQJ</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/pools</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>EhMQqf08jr</argument>
+      <argument>ynN9W-P7kZ</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/pools</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>p7zVbfbqtT</argument>
+      <argument>TtPk6F6jfY</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/pools</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>+hINZGSAs8</argument>
+      <argument>Qhr5TgekzH</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/pools</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.property_info.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>oK+Bem0Aml</argument>
+      <argument>NcmJ2Ahv1y</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/pools</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.messenger.restart_workers_signal.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="false">
-      <argument>xam7rYzrj+</argument>
+      <argument>NrBAZk+GAG</argument>
       <argument>0</argument>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/pools</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
       </call>
     </service>
     <service id="cache.security_expression_language.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>F4wIGwZId3</argument>
+      <argument>c8BWykzrbV</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/pools</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="api_platform.cache.route_name_resolver.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>s2R1dJFYv6</argument>
+      <argument>GN8EHUBPEJ</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/pools</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="api_platform.cache.identifiers_extractor.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>wa9ym5D7vv</argument>
+      <argument>r6NMm4c8gn</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/pools</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="api_platform.cache.subresource_operation_factory.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>2UbPwoN57N</argument>
+      <argument>+mRzGFR1mk</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/pools</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="api_platform.cache.metadata.resource.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>zLtFhQfGVv</argument>
+      <argument>s3GH1H1UBr</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/pools</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="api_platform.cache.metadata.property.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>5kbwtelGtR</argument>
+      <argument>nzOkKTUg77</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/elina/nickel/nickel/var/cache/dev/pools</argument>
+      <argument>/home/elina/derniér/nickel/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
-    <service id=".service_locator.xEWwCJt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.uxa.tru" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="Symfony\Bridge\Twig\Extension\CsrfRuntime" type="service" id="twig.runtime.security_csrf"/>
         <argument key="Symfony\Bridge\Twig\Extension\HttpKernelRuntime" type="service" id="twig.runtime.httpkernel"/>
+        <argument key="Symfony\Component\Form\FormRenderer" type="service" id="twig.form.renderer"/>
       </argument>
     </service>
     <service id="Psr\Container\ContainerInterface" alias="service_container" public="false"/>
@@ -5377,6 +5878,11 @@
     <service id="Symfony\Component\Security\Csrf\TokenGenerator\TokenGeneratorInterface" alias="security.csrf.token_generator" public="false"/>
     <service id="Symfony\Component\Security\Csrf\TokenStorage\TokenStorageInterface" alias="security.csrf.token_storage" public="false"/>
     <service id="Symfony\Component\Security\Csrf\CsrfTokenManagerInterface" alias="security.csrf.token_manager" public="false"/>
+    <service id="Symfony\Component\Form\ResolvedFormTypeFactoryInterface" alias="form.resolved_type_factory" public="false"/>
+    <service id="Symfony\Component\Form\FormRegistryInterface" alias="form.registry" public="false"/>
+    <service id="Symfony\Component\Form\FormFactoryInterface" alias="form.factory" public="false"/>
+    <service id="form.property_accessor" alias="property_accessor" public="false"/>
+    <service id="form.choice_list_factory" alias="form.choice_list_factory.cached" public="false"/>
     <service id="Symfony\Component\Asset\Packages" alias="assets.packages" public="false"/>
     <service id="Symfony\Component\Validator\Validator\ValidatorInterface" alias="debug.validator" public="false"/>
     <service id="validator.mapping.class_metadata_factory" alias="debug.validator" public="false"/>
@@ -5504,10 +6010,16 @@
     <service id="lexik_jwt_authentication.encoder" alias="lexik_jwt_authentication.encoder.lcobucci" public="true"/>
     <service id="Lexik\Bundle\JWTAuthenticationBundle\Encoder\JWTEncoderInterface" alias="lexik_jwt_authentication.encoder.lcobucci"/>
     <service id="lexik_jwt_authentication.key_loader" alias="lexik_jwt_authentication.key_loader.raw" public="true"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.bqQroai"/>
+    <service id="FOS\RestBundle\View\ViewHandlerInterface" alias="fos_rest.view_handler.default"/>
+    <service id="FOS\RestBundle\Request\ParamFetcherInterface" alias="fos_rest.request.param_fetcher"/>
+    <service id="fos_rest.router" alias="router.default"/>
+    <service id="fos_rest.view_handler" alias="fos_rest.view_handler.default" public="true"/>
+    <service id="fos_rest.inflector" alias="fos_rest.inflector.doctrine"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.Xlha9RZ"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="api_platform.name_converter" alias="serializer.name_converter.metadata_aware"/>
+    <service id="fos_rest.serializer" alias="fos_rest.serializer.symfony"/>
     <service id="Psr\Log\LoggerInterface" alias="logger" public="false"/>
     <service id=".service_locator.b1qho2Z" alias="api_platform.serializer_locator" public="false"/>
     <service id=".service_locator.YUq96kP" alias="api_platform.filter_locator" public="false"/>
