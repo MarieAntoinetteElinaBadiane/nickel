@@ -13,13 +13,55 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 
-class ServiceController extends AbstractController
+class ServiceController extends FOSRestController
 {
+
+/**
+* @Route("/register", name="app_register")
+*/
+    public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
+    {
+        $user = new User();
+        $form = $this->createForm(UserType::class, $user);
+        $form->handleRequest($request);
+        $data=$request->request->all();
+        $file=$request->files->all()['imageFile'];
+
+        $form->submit($data);
+
+       
+            // encode the plain password
+            $user->setPassword(
+                $passwordEncoder->encodePassword(
+                    $user,
+                    $form->get('password')->getData()
+                )
+            );
+
+            $user->setRoles(["Role_AdminWari"]);
+            $user->setImageFile($file);
+           
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($user);
+            $entityManager->flush();
+
+            // do anything else you need here, like send an email
+
+            
+            return new Response('Utilisateur ajouté',Response::HTTP_CREATED); 
+        
+
+        //return $this->handleView($this->view($form->getErros()));
+    }
+
+
 /**
 * @Route("/ajoutdestrois", name="ajoutdestrois", methods={"POST"})
 */
@@ -38,12 +80,12 @@ public function ajout(Request $request, EntityManagerInterface $entityManager, U
     $form=$this->createForm(UserType::class , $utilisateur);
     $form->handleRequest($request);
     $data=$request->request->all();
-    //$file= $request->files->all()['imageName'];
+    $file= $request->files->all()['imageFile'];
     $form->submit($data);
 
     $utilisateur->setRoles(["ROLE_CAISSIER"]);
     //$utilisateur->setUpdatedAt(new \DateTime());
-    //$utilisateur->setImageFile($file);
+    $utilisateur->setImageFile($file);
     $utilisateur->setPassword($passwordEncoder->encodePassword($utilisateur,
     $form->get('password')->getData()
         )
@@ -226,4 +268,3 @@ public function argent(Request $request, EntityManagerInterface $entityManager, 
     return new Response('Le depot sur votre compte sest bien passé',Response::HTTP_CREATED); 
     }
 }
-

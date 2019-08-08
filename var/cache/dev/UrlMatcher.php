@@ -15,6 +15,7 @@ return [
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/authentification' => [[['_route' => 'authentification', '_controller' => 'App\\Controller\\AuthentificationController::index'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\AuthentificationController::login'], null, ['POST' => 0], null, false, false, null]],
+        '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\ServiceController::register'], null, null, null, false, false, null]],
         '/ajoutdestrois' => [[['_route' => 'ajoutdestrois', '_controller' => 'App\\Controller\\ServiceController::ajout'], null, ['POST' => 0], null, false, false, null]],
         '/caissier' => [[['_route' => 'caissier', '_controller' => 'App\\Controller\\ServiceController::caissier'], null, ['POST' => 0], null, false, false, null]],
         '/admin' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\ServiceController::admin'], null, ['POST' => 0], null, false, false, null]],

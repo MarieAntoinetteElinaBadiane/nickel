@@ -17,6 +17,7 @@ return [
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception::cssAction'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     'authentification' => [[], ['_controller' => 'App\\Controller\\AuthentificationController::index'], [], [['text', '/authentification']], [], []],
     'login' => [[], ['_controller' => 'App\\Controller\\AuthentificationController::login'], [], [['text', '/login']], [], []],
+    'app_register' => [[], ['_controller' => 'App\\Controller\\ServiceController::register'], [], [['text', '/register']], [], []],
     'ajoutdestrois' => [[], ['_controller' => 'App\\Controller\\ServiceController::ajout'], [], [['text', '/ajoutdestrois']], [], []],
     'caissier' => [[], ['_controller' => 'App\\Controller\\ServiceController::caissier'], [], [['text', '/caissier']], [], []],
     'admin' => [[], ['_controller' => 'App\\Controller\\ServiceController::admin'], [], [['text', '/admin']], [], []],

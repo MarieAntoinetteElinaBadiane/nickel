@@ -36,11 +36,6 @@ class Partenaire
     private $raison_sociale;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $photo;
-
-    /**
      * @ORM\OneToMany(targetEntity="App\Entity\User", mappedBy="partenaire")
      */
     private $users;
@@ -97,17 +92,7 @@ class Partenaire
         return $this;
     }
 
-    public function getPhoto(): ?string
-    {
-        return $this->photo;
-    }
-
-    public function setPhoto(string $photo): self
-    {
-        $this->photo = $photo;
-
-        return $this;
-    }
+    
 
     /**
      * @return Collection|User[]

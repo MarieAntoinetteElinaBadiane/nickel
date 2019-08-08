@@ -12,9 +12,9 @@ class CompteType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('numerocompte')
+            //->add('numerocompte')
             ->add('partenaire')
-            //->add('solde')
+            ->add('solde')
         ;
     }
 
